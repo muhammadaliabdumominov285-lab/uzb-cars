@@ -70,6 +70,12 @@
 
       </a>
 
+      <!-- Jonli ish vaqti indikatori -->
+      <div class="showroom-status" id="showroomStatus" title="Avtosalon ish vaqti: 09:00 - 20:00">
+        <span class="status-pulse"></span>
+        <span class="status-text" id="statusText">Ochiq: 09:00 - 20:00</span>
+      </div>
+
       <!-- Mobil menyu tugmasi (hamburger) -->
 
       <label for="menu-toggle" class="menu-icon" aria-label="Menyu">
@@ -81,31 +87,92 @@
       <!-- Navigatsiya sarlavhalari -->
 
       <ul class="nav-menu">
+        <li><a href="#home" class="nav-link"><i class="fa-solid fa-house"></i> <span>Bosh sahifa</span></a></li>
+        <li><a href="#uzb-cars" class="nav-link text-uzb"><i class="fa-solid fa-flag"></i> <span>Mahalliy</span></a></li>
+        <li><a href="#import-cars" class="nav-link"><i class="fa-solid fa-gem"></i> <span>Import</span></a></li>
+        <li><a href="#promotions" class="nav-link text-promo"><i class="fa-solid fa-fire"></i> <span>Aksiya</span></a></li>
+        <li><a href="#credit" class="nav-link"><i class="fa-solid fa-calculator"></i> <span>Kredit</span></a></li>
+        <li><a href="#trade-in" class="nav-link"><i class="fa-solid fa-arrows-rotate"></i> <span>Trade-In</span></a></li>
+        <li><a href="#compare" class="nav-link"><i class="fa-solid fa-code-compare"></i> <span>Taqqoslash</span></a></li>
 
-        <li><a href="#home" class="nav-link">Bosh sahifa</a></li>
+        <!-- Xizmatlar & Yana (Desktop Dropdown) -->
+        <li class="nav-dropdown">
+          <a href="#services" class="nav-link dropdown-toggle" id="navDropdownToggle">
+            <i class="fa-solid fa-layer-group"></i> <span>Xizmatlar</span> <i class="fa-solid fa-chevron-down nav-drop-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="#fuel-calc" class="nav-drop-item">
+              <i class="fa-solid fa-gas-pump text-accent"></i>
+              <div>
+                <strong>Tejamkorlik</strong>
+                <span>Yoqilg'i & EV kalkulyatori</span>
+              </div>
+            </a>
+            <a href="#insurance" class="nav-drop-item">
+              <i class="fa-solid fa-file-shield text-accent"></i>
+              <div>
+                <strong>KASKO Sug'urta</strong>
+                <span>Kafolat & onlayn hisob</span>
+              </div>
+            </a>
+            <a href="#services" class="nav-drop-item">
+              <i class="fa-solid fa-shield-halved text-accent"></i>
+              <div>
+                <strong>Salon Servisi</strong>
+                <span>Ro'yxatdan o'tkazish & kafolat</span>
+              </div>
+            </a>
+            <a href="#about" class="nav-drop-item">
+              <i class="fa-solid fa-building text-accent"></i>
+              <div>
+                <strong>Kompaniya</strong>
+                <span>Biz haqimizda ma'lumot</span>
+              </div>
+            </a>
+            <a href="#reviews" class="nav-drop-item">
+              <i class="fa-solid fa-star text-gold"></i>
+              <div>
+                <strong>Mijozlar Fikri</strong>
+                <span>5,000+ haqiqiy sharhlar</span>
+              </div>
+            </a>
+            <a href="#faq" class="nav-drop-item">
+              <i class="fa-solid fa-circle-question text-accent"></i>
+              <div>
+                <strong>FAQ Savol-Javob</strong>
+                <span>Kredit va hujjatlar</span>
+              </div>
+            </a>
+          </div>
+        </li>
 
-        <li><a href="#uzb-cars" class="nav-link" style="color: #34d399;"><i class="fa-solid fa-flag text-xs"></i> O'zbek Mashinalari</a></li>
-
-        <li><a href="#import-cars" class="nav-link">Premium Import</a></li>
-
-        <li><a href="#credit" class="nav-link">Kredit & Lizing</a></li>
-
-        <li><a href="#services" class="nav-link">Xizmatlar</a></li>
-
-        <li><a href="#contact" class="nav-link">Aloqa</a></li>
-
+        <li><a href="#contact" class="nav-link"><i class="fa-solid fa-headset"></i> <span>Aloqa</span></a></li>
       </ul>
 
       <!-- O'ng tomondagi tezkor qo'ng'iroq va CTA -->
 
       <div class="nav-actions">
+        <!-- Sevimlilar (Wishlist) tugmasi -->
+        <button type="button" class="btn-wishlist-toggle" id="wishlistToggleBtn" title="Saqlangan mashinalar">
+          <i class="fa-solid fa-heart"></i>
+          <span class="wishlist-badge" id="wishlistBadge">0</span>
+        </button>
 
-        <a href="tel:+998973419500" class="phone-quick">
+        <!-- Valyuta o'tkazgich ($ / So'm) -->
+        <div class="currency-toggle" id="currencyToggle">
+          <button type="button" class="curr-pill active" data-curr="USD">$ USD</button>
+          <button type="button" class="curr-pill" data-curr="UZS">So'm</button>
+        </div>
 
+
+                <!-- Kunduzgi / Tungi rejim (Theme Toggle) -->
+        <button type="button" class="btn-theme-toggle" id="themeToggleBtn" title="Kunduzgi / Tungi rejim">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+
+        <a href="tel:+998973419500" class="phone-quick" title="Qo'ng'iroq qilish">
           <i class="fa-solid fa-phone text-accent"></i>
-
-          <span>+998 (97) 341-95-00</span>
-
+          <span class="phone-num"><span class="phone-code">+998 </span>(97) 341-95-00</span>
         </a>
 
         <a href="#contact" class="nav-btn">Test-Drayv</a>
@@ -193,39 +260,34 @@
       <!-- Statistika ko'rsatkichlari -->
 
       <div class="hero-stats">
-
-        <div>
-
-          <div class="stat-num">250+</div>
-
-          <div class="stat-label">Salondagi mashinalar</div>
-
+        <div class="hero-stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-warehouse"></i></div>
+          <div>
+            <div class="stat-num">250+</div>
+            <div class="stat-label">Salondagi mashinalar</div>
+          </div>
         </div>
-
-        <div>
-
-          <div class="stat-num">0 km</div>
-
-          <div class="stat-label">Yangi va kafolatli</div>
-
+        <div class="hero-stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <div>
+            <div class="stat-num">0 km</div>
+            <div class="stat-label">Yangi va kafolatli</div>
+          </div>
         </div>
-
-        <div>
-
-          <div class="stat-num">3 Yil</div>
-
-          <div class="stat-label">Rasmiy kafolat</div>
-
+        <div class="hero-stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+          <div>
+            <div class="stat-num">3 Yil</div>
+            <div class="stat-label">Rasmiy kafolat</div>
+          </div>
         </div>
-
-        <div>
-
-          <div class="stat-num">20% dan</div>
-
-          <div class="stat-label">Boshlang'ich kredit</div>
-
+        <div class="hero-stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-percent"></i></div>
+          <div>
+            <div class="stat-num">20% dan</div>
+            <div class="stat-label">Boshlang'ich kredit</div>
+          </div>
         </div>
-
       </div>
 
     </div>
@@ -340,6 +402,80 @@
 
        ========================================================== -->
 
+
+  <!-- ==========================================================
+       KATALOG FILTRI VA QIDIRUV (SEARCH & FILTER TOOLBAR)
+       ========================================================== -->
+  <section id="catalog-filter" class="catalog-filter-section">
+    <div class="container">
+      <div class="filter-toolbar">
+        
+        <!-- Qidiruv qatori -->
+        <div class="filter-search-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="carSearchInput" placeholder="Model, brend yoki narx bo'yicha qidirish (masalan: Cobalt, Malibu, BMW...)" class="search-input">
+          <button type="button" id="clearSearchBtn" class="clear-search-btn" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Toifalar bo'yicha filtrlar -->
+        <div class="filter-pills-group" id="filterPillsGroup">
+          <button type="button" class="filter-pill active" data-filter="all"><i class="fa-solid fa-border-all"></i> Barchasi (14)</button>
+          <button type="button" class="filter-pill" data-filter="uzb"><i class="fa-solid fa-flag text-uzb"></i> O'zbek (UzAuto)</button>
+          <button type="button" class="filter-pill" data-filter="import"><i class="fa-solid fa-gem"></i> Premium Import</button>
+          <button type="button" class="filter-pill" data-filter="sedan"><i class="fa-solid fa-car-side"></i> Sedanlar</button>
+          <button type="button" class="filter-pill" data-filter="suv"><i class="fa-solid fa-truck-monster"></i> Krossover & SUV</button>
+          <button type="button" class="filter-pill" data-filter="ev"><i class="fa-solid fa-bolt"></i> Elektromobil</button>
+        </div>
+
+        <!-- Narx bo'yicha saralash -->
+        <div class="filter-sort-wrap">
+          <label for="carSortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Saralash:</label>
+          <select id="carSortSelect" class="sort-select">
+            <option value="default">Tavsiya etilgan</option>
+            <option value="price-asc">Narx: Arzondan qimmatga</option>
+            <option value="price-desc">Narx: Qimmatdan arzonga</option>
+            <option value="power-desc">Ot kuchi: Kattasidan</option>
+          </select>
+        </div>
+
+      </div>
+
+            <!-- 1. OYLIK BYUDJET BO'YICHA MASHINA TANLASH (SMART BUDGET MATCHER) -->
+      <div class="budget-filter-bar">
+        <div class="bf-left">
+          <div class="bf-label">
+            <i class="fa-solid fa-wallet text-accent"></i>
+            <span>Oylik Byudjetingiz:</span>
+          </div>
+          <div class="budget-pills-wrap" id="budgetPillsWrap">
+            <button type="button" class="budget-pill active" data-budget="all">Barchasi</button>
+            <button type="button" class="budget-pill" data-budget="250">$250 gacha (3.2 mln)</button>
+            <button type="button" class="budget-pill" data-budget="400">$400 gacha (5.1 mln)</button>
+            <button type="button" class="budget-pill" data-budget="600">$600 gacha (7.7 mln)</button>
+            <button type="button" class="budget-pill" data-budget="1000">$1,000 gacha (12.8 mln)</button>
+            <button type="button" class="budget-pill" data-budget="custom"><i class="fa-solid fa-sliders"></i> Boshqa summa</button>
+          </div>
+        </div>
+        <div class="budget-slider-box" id="budgetSliderBox" style="display: none;">
+          <span class="bs-text">Maksimal oylik:</span>
+          <input type="range" id="customBudgetRange" min="150" max="3000" step="50" value="500" class="budget-range">
+          <span class="budget-slider-val" id="customBudgetVal">$500 / oy</span>
+        </div>
+      </div>
+
+      <!-- Qidiruv natijasi hisoblagichi -->
+      <div class="filter-status-bar">
+        <span id="filterCount">34 ta avtomobil topildi</span>
+        <button type="button" class="btn-pdf-catalog" id="btnPdfCatalog" title="Barcha narxlar jadvalini PDF formatda ko'rish va chop etish">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Katalog & Narxlar (PDF)</span>
+        </button>
+        <button type="button" id="resetFiltersBtn" class="reset-filter-link" style="display: none;">Filtrlarni tozalash</button>
+      </div>
+
+    </div>
+  </section>
+
   <section id="uzb-cars" class="section" style="background: #090d16;">
 
     <div class="container">
@@ -366,12 +502,13 @@
 
         <!-- O'zbek 1: Chevrolet Malibu 2 Premier -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Chevrolet Malibu 2 Premier (Redline)" data-price="34000" data-credit="520" data-hp="253" data-category="sedan" data-origin="uzb">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-uzb">UzAuto Premier</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="malibu.png" alt="Chevrolet Malibu 2 Premier">
@@ -448,12 +585,13 @@
 
         <!-- O'zbek 2: Chevrolet Tracker 2 Premier -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Chevrolet Tracker 2 Premier" data-price="21500" data-credit="330" data-hp="132" data-category="suv" data-origin="uzb">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-uzb">Top Krossover</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="tracker.png" alt="Chevrolet Tracker 2 Premier">
@@ -530,12 +668,13 @@
 
         <!-- O'zbek 3: Chevrolet Onix Premier 2 -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Chevrolet Onix Premier 2 Plus" data-price="18500" data-credit="280" data-hp="132" data-category="sedan" data-origin="uzb">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-uzb">Zamonaviy Sedan</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="onix.png" alt="Chevrolet Onix Premier">
@@ -612,12 +751,13 @@
 
         <!-- O'zbek 4: Chevrolet Cobalt GX / Style AT -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Chevrolet Cobalt 4-Pozitsiya (Style AT)" data-price="13500" data-credit="210" data-hp="106" data-category="sedan" data-origin="uzb">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-in-stock">Xalq Tanlovi</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="cobalt.png" alt="Chevrolet Cobalt Style">
@@ -694,12 +834,13 @@
 
         <!-- O'zbek 5: Chevrolet Lacetti / Gentra Black Edition -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Chevrolet Gentra 3-Pozitsiya (CDX Elegance)" data-price="14000" data-credit="220" data-hp="107" data-category="sedan" data-origin="uzb">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-exclusive">Xalq Afsonasi</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="gentra.png" alt="Chevrolet Lacetti Gentra">
@@ -776,12 +917,13 @@
 
         <!-- O'zbek 6: Chevrolet Captiva 5 Premier -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Chevrolet Captiva 5 Premier (7-o'rin)" data-price="29500" data-credit="450" data-hp="149" data-category="suv" data-origin="uzb">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-uzb">7 O'rinli SUV</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="captiva.png" alt="Chevrolet Captiva 5">
@@ -858,12 +1000,13 @@
 
         <!-- O'zbek 7: Chevrolet Damas D2 Van -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Chevrolet Damas D2 (Van / Yo'lovchi)" data-price="8500" data-credit="140" data-hp="38" data-category="suv" data-origin="uzb">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-in-stock">Biznes Usta</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="damas.png" alt="Chevrolet Damas Van">
@@ -940,12 +1083,13 @@
 
         <!-- O'zbek 8: Kia Sonet Prestige (ADM Jizzakh) -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Kia Sonet Prestige (Krossover)" data-price="18900" data-credit="290" data-hp="115" data-category="suv" data-origin="uzb">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-uzb">ADM Jizzax</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="sonet.png" alt="Kia Sonet Prestige">
@@ -1019,6 +1163,436 @@
           </div>
 
         </div>
+        <!-- O'zbek 9: Chevrolet Monza 1.5L Plus -->
+        <div class="car-card" data-name="Chevrolet Monza 1.5L Plus" data-price="19500" data-credit="300" data-hp="113" data-category="sedan" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">Ommabop Sedan</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="monza.png" alt="Chevrolet Monza">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">Chevrolet Uzbekistan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Chevrolet Monza 1.5L Plus</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>1.5L VVT</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>113 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>6-Avtomat DCT</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$19,500</span>
+                <span class="price-sub">Kredit: $300 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 10: Chevrolet Spark 4-Pozitsiya -->
+        <div class="car-card" data-name="Chevrolet Spark 4-Pozitsiya Elegance" data-price="10500" data-credit="165" data-hp="85" data-category="sedan" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">Shahar Xetchbeki</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="spark.png" alt="Chevrolet Spark">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">Chevrolet Uzbekistan</span>
+                <span class="car-year">2023 yil / Yangi</span>
+              </div>
+              <h3 class="car-name">Chevrolet Spark 4-Pozitsiya (AT Elegance)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>1.25L DOHC</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>85 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>4-Avtomat</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$10,500</span>
+                <span class="price-sub">Kredit: $165 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 11: Chevrolet Equinox RS 2.0 Turbo -->
+        <div class="car-card" data-name="Chevrolet Equinox RS 2.0 Turbo" data-price="38000" data-credit="580" data-hp="236" data-category="suv" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">Sport RS AWD</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="equinox.png" alt="Chevrolet Equinox">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">Chevrolet Uzbekistan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Chevrolet Equinox RS 2.0 Turbo (AWD)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>2.0L Turbo</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>236 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>9-Avtomat AWD</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$38,000</span>
+                <span class="price-sub">Kredit: $580 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 12: Chevrolet Traverse Premier 3.6L -->
+        <div class="car-card" data-name="Chevrolet Traverse Premier 3.6L" data-price="59000" data-credit="890" data-hp="318" data-category="suv" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">Flagman 7-O'rin</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="traverse.png" alt="Chevrolet Traverse">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">Chevrolet Uzbekistan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Chevrolet Traverse Premier 3.6L (AWD 7-o'rin)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>3.6L V6 VVT</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>318 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>9-Avtomat AWD</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$59,000</span>
+                <span class="price-sub">Kredit: $890 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 13: Chevrolet Labo Pick-Up -->
+        <div class="car-card" data-name="Chevrolet Labo Pick-Up" data-price="8200" data-credit="135" data-hp="38" data-category="suv" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">Tijoriy Pikap</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="labo.png" alt="Chevrolet Labo">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">Chevrolet Uzbekistan</span>
+                <span class="car-year">2024 yil / Yangi</span>
+              </div>
+              <h3 class="car-name">Chevrolet Labo Pick-Up (0.55t Tijoriy)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>0.8L Benzin</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>38 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>5-Mexanika</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$8,200</span>
+                <span class="price-sub">Kredit: $135 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 14: Kia K5 GT-Line 2.5L -->
+        <div class="car-card" data-name="Kia K5 GT-Line 2.5L" data-price="33000" data-credit="510" data-hp="194" data-category="sedan" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">ADM Jizzax Biznes</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="k5.png" alt="Kia K5 GT-Line">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">Kia Uzbekistan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Kia K5 GT-Line 2.5L (Biznes Sedan)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>2.5L Smartstream</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>194 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>8-Avtomat</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$33,000</span>
+                <span class="price-sub">Kredit: $510 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 15: Kia Sportage X-Line -->
+        <div class="car-card" data-name="Kia Sportage X-Line" data-price="34500" data-credit="530" data-hp="190" data-category="suv" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">ADM Jizzax Krossover</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="sportage.png" alt="Kia Sportage X-Line">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">Kia Uzbekistan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Kia Sportage X-Line (AWD Premium Krossover)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>2.5L GDI</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>190 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>8-Avtomat AWD</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$34,500</span>
+                <span class="price-sub">Kredit: $530 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 16: Kia Seltos Luxe 2.0L -->
+        <div class="car-card" data-name="Kia Seltos Luxe 2.0L" data-price="26000" data-credit="395" data-hp="149" data-category="suv" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">ADM Jizzax Krossover</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="seltos.png" alt="Kia Seltos">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">Kia Uzbekistan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Kia Seltos Luxe 2.0L (Krossover)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>2.0L MPI</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>149 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>IVT Avtomat</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$26,000</span>
+                <span class="price-sub">Kredit: $395 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 17: BYD Song Plus DM-i -->
+        <div class="car-card" data-name="BYD Song Plus DM-i Champion" data-price="29500" data-credit="450" data-hp="218" data-category="ev suv" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">BYD Uzbekistan Zavod</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="songplus.png" alt="BYD Song Plus">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">BYD Uzbekistan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">BYD Song Plus DM-i (Champion Edition Gibrid)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>1.5L DM-i Hybrid</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>218 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>E-CVT Gibrid</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$29,500</span>
+                <span class="price-sub">Kredit: $450 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- O'zbek 18: BYD Chazor DM-i -->
+        <div class="car-card" data-name="BYD Chazor DM-i Destroyer" data-price="19800" data-credit="305" data-hp="197" data-category="ev sedan" data-origin="uzb">
+          <div class="car-image-box">
+            <span class="badge-condition badge-uzb">BYD Uzbekistan Zavod</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="chazor.png" alt="BYD Chazor">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand car-brand-uzb">BYD Uzbekistan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">BYD Chazor DM-i (Destroyer 05 Gibrid Sedan)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item spec-item-uzb" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>1.5L DM-i Gibrid</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>197 ot kuchi</span>
+              </div>
+              <div class="spec-item spec-item-uzb" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>E-CVT Gibrid</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$19,800</span>
+                <span class="price-sub">Kredit: $305 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book btn-book-uzb">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
 
       </div>
 
@@ -1054,12 +1628,13 @@
 
         <!-- Import 1: BMW M5 Competition -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="BMW M5 Competition" data-price="145000" data-credit="2100" data-hp="625" data-category="sedan" data-origin="import">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-exclusive">Top Tanlov</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="BMW M5 Competition">
@@ -1136,12 +1711,13 @@
 
         <!-- Import 2: Mercedes-Benz G63 AMG -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Mercedes-Benz G63 AMG" data-price="215000" data-credit="3200" data-hp="585" data-category="suv" data-origin="import">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-in-stock">Salonda Bor</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="https://images.unsplash.com/photo-1520031441872-265e4ff70366?auto=format&fit=crop&w=800&q=80" alt="Mercedes-Benz G63 AMG">
@@ -1218,12 +1794,13 @@
 
         <!-- Import 3: Porsche 911 Carrera S -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Porsche 911 Carrera S" data-price="165000" data-credit="2450" data-hp="450" data-category="sedan" data-origin="import">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-exclusive">Sportkar</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80" alt="Porsche 911 Carrera S">
@@ -1300,12 +1877,13 @@
 
         <!-- Import 4: BYD Yangwang U8 -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="BYD Yangwang U8 Off-Road" data-price="152000" data-credit="2250" data-hp="1197" data-category="ev suv" data-origin="import">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-new">Gibrid EV</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80" alt="BYD Yangwang U8">
@@ -1382,12 +1960,13 @@
 
         <!-- Import 5: Chevrolet Tahoe High Country -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Chevrolet Tahoe High Country" data-price="94000" data-credit="1400" data-hp="420" data-category="suv" data-origin="import">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-in-stock">Salonda Bor</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Chevrolet Tahoe High Country">
@@ -1464,12 +2043,13 @@
 
         <!-- Import 6: Audi RS7 Sportback -->
 
-        <div class="car-card">
+        <div class="car-card" data-name="Audi RS7 Sportback" data-price="138000" data-credit="2050" data-hp="600" data-category="sedan" data-origin="import">
 
           <div class="car-image-box">
 
             <span class="badge-condition badge-exclusive">Quattro</span>
 
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
             <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
 
             <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80" alt="Audi RS7 Sportback">
@@ -1543,12 +2123,714 @@
           </div>
 
         </div>
+        <!-- Import 7: Mercedes-Maybach S580 4MATIC -->
+        <div class="car-card" data-name="Mercedes-Maybach S580 4MATIC" data-price="240000" data-credit="3600" data-hp="503" data-category="sedan" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">Maybach VIP</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="Mercedes-Maybach S580">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Mercedes-Maybach</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Mercedes-Maybach S580 4MATIC (VIP Limuzin)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>4.0L V8 Biturbo</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>503 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>9G-Tronic 4MATIC</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$240,000</span>
+                <span class="price-sub">Kredit: $3,600 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 8: BMW XM Label Red -->
+        <div class="car-card" data-name="BMW XM Label Red Flagman" data-price="210000" data-credit="3150" data-hp="748" data-category="suv" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">M Hybrid Flagman</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?auto=format&fit=crop&w=800&q=80" alt="BMW XM Label Red">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">BMW M Power</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">BMW XM Label Red (748 Ot Kuchi Flagman M)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>4.4L M Hybrid V8</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>748 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>8-M Steptronic</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$210,000</span>
+                <span class="price-sub">Kredit: $3,150 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 9: Rolls-Royce Cullinan Black Badge -->
+        <div class="car-card" data-name="Rolls-Royce Cullinan Black Badge" data-price="480000" data-credit="7200" data-hp="600" data-category="suv" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">Ultra Hashamat</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=800&q=80" alt="Rolls-Royce Cullinan">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Rolls-Royce Bespoke</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Rolls-Royce Cullinan Black Badge (Ultra Hashamat)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>6.75L V12 Twin-Turbo</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>600 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>8-Avtomat Satellite</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$480,000</span>
+                <span class="price-sub">Kredit: $7,200 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 10: Lamborghini Urus Performante -->
+        <div class="car-card" data-name="Lamborghini Urus Performante" data-price="340000" data-credit="5100" data-hp="666" data-category="suv" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">Performante</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80" alt="Lamborghini Urus">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Lamborghini Squadra</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Lamborghini Urus Performante (Super-SUV)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>4.0L Twin-Turbo V8</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>666 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>8-Avtomat 4WD</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$340,000</span>
+                <span class="price-sub">Kredit: $5,100 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 11: Ferrari 296 GTB -->
+        <div class="car-card" data-name="Ferrari 296 GTB Gibrid" data-price="370000" data-credit="5500" data-hp="830" data-category="sedan" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">F1 Hybrid 830HP</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Ferrari 296 GTB">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Ferrari Maranello</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Ferrari 296 GTB (Gibrid Superkar)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>3.0L V6 Turbo PHEV</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>830 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>8-F1 Dual-Clutch</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$370,000</span>
+                <span class="price-sub">Kredit: $5,500 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 12: Land Rover Range Rover SV Autobiography -->
+        <div class="car-card" data-name="Land Rover Range Rover SV Autobiography" data-price="260000" data-credit="3900" data-hp="530" data-category="suv" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">SV Bespoke LWB</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=800&q=80" alt="Range Rover SV">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Land Rover UK</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Land Rover Range Rover SV Autobiography (LWB)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>4.4L Twin-Turbo V8</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>530 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>8-Avtomat ZF AWD</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$260,000</span>
+                <span class="price-sub">Kredit: $3,900 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 13: Lexus LX 600 VIP Black Edition -->
+        <div class="car-card" data-name="Lexus LX 600 VIP Black Edition" data-price="175000" data-credit="2600" data-hp="415" data-category="suv" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">VIP Black Edition</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Lexus LX 600">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Lexus Japan</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Lexus LX 600 VIP Black Edition (Twin-Turbo)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>3.5L V6 Twin-Turbo</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>415 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>10-Avtomat Direct</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$175,000</span>
+                <span class="price-sub">Kredit: $2,600 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 14: Tesla Model S Plaid -->
+        <div class="car-card" data-name="Tesla Model S Plaid EV" data-price="115000" data-credit="1750" data-hp="1020" data-category="ev sedan" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">Plaid 1020HP EV</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80" alt="Tesla Model S Plaid">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Tesla USA</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Tesla Model S Plaid (0-100: 2.1 soniya)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Tri-Motor AWD</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>1020 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>1-Tezlik Avtomat</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$115,000</span>
+                <span class="price-sub">Kredit: $1,750 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 15: Cadillac Escalade-V -->
+        <div class="car-card" data-name="Cadillac Escalade-V Supercharged" data-price="185000" data-credit="2750" data-hp="682" data-category="suv" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">V-Series 682HP</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Cadillac Escalade-V">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Cadillac USA</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Cadillac Escalade-V (Supercharged 6.2L V8)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>6.2L Supercharged V8</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>682 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>10-Avtomat Hydra</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$185,000</span>
+                <span class="price-sub">Kredit: $2,750 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import 16: Bentley Continental GT Speed -->
+        <div class="car-card" data-name="Bentley Continental GT Speed" data-price="310000" data-credit="4650" data-hp="650" data-category="sedan" data-origin="import">
+          <div class="car-image-box">
+            <span class="badge-condition badge-exclusive">Mulliner Speed</span>
+            <button type="button" class="btn-card-sound" title="Dvigatel tovushini tinglash"><i class="fa-solid fa-volume-high"></i></button>
+            <span class="car-like-icon" title="Saqlash"><i class="fa-regular fa-heart"></i></span>
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="Bentley Continental GT">
+          </div>
+          <div class="car-details">
+            <div>
+              <div class="car-brand-year">
+                <span class="car-brand">Bentley Crewe</span>
+                <span class="car-year">2024 yil / 0 km</span>
+              </div>
+              <h3 class="car-name">Bentley Continental GT Speed (W12 Twin-Turbo)</h3>
+            </div>
+            <div class="car-specs">
+              <div class="spec-item" title="Dvigatel">
+                <i class="fa-solid fa-gauge"></i>
+                <span>6.0L W12 TSI Turbo</span>
+              </div>
+              <div class="spec-item" title="Ot kuchi">
+                <i class="fa-solid fa-horse-head"></i>
+                <span>650 ot kuchi</span>
+              </div>
+              <div class="spec-item" title="Uzatma">
+                <i class="fa-solid fa-gear"></i>
+                <span>8-Dual-Clutch AWD</span>
+              </div>
+            </div>
+            <div class="car-pricing-action">
+              <div class="price-box">
+                <span class="price-main">$310,000</span>
+                <span class="price-sub">Kredit: $4,650 / oy</span>
+              </div>
+              <a href="#contact" class="btn-book">
+                <i class="fa-solid fa-tag"></i>
+                <span>Band qilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
 
       </div>
 
     </div>
 
   </section>
+  <!-- ==========================================================
+       KOMPANIYA HAQIDA (ABOUT US)
+       ========================================================== -->
+
+  <!-- ==========================================================
+       AVTOMOBILLARNI TAQQOSLASH (CAR COMPARISON TOOL)
+       ========================================================== -->
+  
+  <!-- ==========================================================
+       MAXSUS AKSIYA VA SOVG'ALAR (PROMOTIONS & COUNTDOWN)
+       ========================================================== -->
+  <section id="promotions" class="section section-promotions">
+    <div class="container">
+      <div class="promo-card">
+        <div class="promo-badge-row">
+          <span class="badge-promo-live"><i class="fa-solid fa-fire text-accent"></i> Cheklangan Vaqtli Aksiya</span>
+          <span class="promo-discount-tag"><i class="fa-solid fa-gift"></i> 3 Ta Qimmatbaho Sovg'a</span>
+        </div>
+        <h2 class="promo-headline">Bahorgi Maxsus Mavsumiy Aksiya & 100% Bepul Sovg'alar!</h2>
+        <p class="promo-sub">Ushbu oy oxirigacha avtosalonimizdan istalgan yangi avtomobil xarid qilgan har bir mijozga kafolatlangan qimmatbaho sovg'alar paketi taqdim etiladi.</p>
+        
+        <!-- Jonli teskari taymer -->
+        <div class="promo-timer-box" id="promoCountdown">
+          <div class="timer-unit"><span class="timer-num" id="cdDays">04</span><span class="timer-lbl">Kun</span></div>
+          <div class="timer-sep">:</div>
+          <div class="timer-unit"><span class="timer-num" id="cdHours">14</span><span class="timer-lbl">Soat</span></div>
+          <div class="timer-sep">:</div>
+          <div class="timer-unit"><span class="timer-num" id="cdMins">32</span><span class="timer-lbl">Daqiqa</span></div>
+          <div class="timer-sep">:</div>
+          <div class="timer-unit"><span class="timer-num" id="cdSecs">45</span><span class="timer-lbl">Soniya</span></div>
+        </div>
+
+        <!-- 3 ta sovg'a kartasi -->
+        <div class="promo-gifts-grid">
+          <div class="gift-card">
+            <div class="gift-icon"><i class="fa-solid fa-shield-heart"></i></div>
+            <h4>1 Yillik KASKO Sug'urta</h4>
+            <p>100% bepul to'liq sug'urta polisi to'g'ridan-to'g'ri bank bilan rasmiylashtirib beriladi.</p>
+          </div>
+          <div class="gift-card">
+            <div class="gift-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h4>Tonirovka & Poliklar</h4>
+            <p>1 yillik orqa oyna tonirovka ruxsatnomasi va sifatli EVA poliklar to'plami sovg'a.</p>
+          </div>
+          <div class="gift-card">
+            <div class="gift-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h4>3 Yil Bepul Servis</h4>
+            <p>3 yil yoki 100,000 km davomida dvigatel moyi va filtrlarini bepul almashtirish xizmati.</p>
+          </div>
+        </div>
+
+        <div class="promo-cta-row">
+          <a href="#contact" class="btn btn-primary btn-promo-action">
+            <i class="fa-solid fa-gift"></i>
+            <span>Aksiyani Band Qilish & Sovg'alarni Olish</span>
+          </a>
+                      <button type="button" class="btn btn-glass" id="cmSoundBtn">
+              <i class="fa-solid fa-volume-high text-accent"></i>
+              <span>Dvigatel ovozi</span>
+            </button>
+            <a href="tel:+998973419500" class="btn btn-glass">
+            <i class="fa-solid fa-phone text-accent"></i>
+            <span>Mutaxassis bilan maslahatlashish</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare" class="section section-compare">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-code-compare"></i> Yonma-Yon Solishtirish</span>
+        <h2 class="section-title">Avtomobillarni Taqqoslash</h2>
+        <p class="section-desc">Ikkita mashinani tanlang va ularning narxi, texnik kuchi hamda qulayliklarini solishtiring.</p>
+      </div>
+
+      <div class="compare-box">
+        
+        <!-- Selektorlar paneli -->
+        <div class="compare-selectors">
+          <div class="comp-sel-col">
+            <label for="compareCar1"><i class="fa-solid fa-car text-accent"></i> 1-Avtomobil:</label>
+            <select id="compareCar1" class="form-control comp-select"></select>
+          </div>
+          <div class="compare-vs-pill">VS</div>
+          <div class="comp-sel-col">
+            <label for="compareCar2"><i class="fa-solid fa-car text-uzb"></i> 2-Avtomobil:</label>
+            <select id="compareCar2" class="form-control comp-select"></select>
+          </div>
+        </div>
+
+        <!-- Taqqoslash natijasi kartasi -->
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Xususiyat</th>
+                <th style="width: 37.5%;" id="compName1">Mashina 1</th>
+                <th style="width: 37.5%;" id="compName2">Mashina 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Surati</strong></td>
+                <td><div class="comp-img-wrap"><img id="compImg1" src="cobalt.png" alt="Mashina 1"></div></td>
+                <td><div class="comp-img-wrap"><img id="compImg2" src="onix.png" alt="Mashina 2"></div></td>
+              </tr>
+              <tr>
+                <td><strong>To'liq narxi</strong></td>
+                <td><span class="comp-price" id="compPrice1">$13,500</span></td>
+                <td><span class="comp-price" id="compPrice2">$18,500</span></td>
+              </tr>
+              <tr>
+                <td><strong>Oylik kredit</strong></td>
+                <td><span class="comp-credit" id="compCredit1">$210 / oy</span></td>
+                <td><span class="comp-credit" id="compCredit2">$280 / oy</span></td>
+              </tr>
+              <tr>
+                <td><strong>Dvigatel</strong></td>
+                <td id="compEngine1">1.5L DOHC</td>
+                <td id="compEngine2">1.2L Turbo</td>
+              </tr>
+              <tr>
+                <td><strong>Ot kuchi</strong></td>
+                <td><strong id="compHp1">106 ot kuchi</strong></td>
+                <td><strong id="compHp2">132 ot kuchi</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Uzatma qutisi</strong></td>
+                <td id="compGear1">6-Bosqichli Avtomat</td>
+                <td id="compGear2">6-Bosqichli Avtomat</td>
+              </tr>
+              <tr>
+                <td><strong>Yoqilg'i sarfi</strong></td>
+                <td id="compFuel1">~7.2 L / 100 km</td>
+                <td id="compFuel2">~6.5 L / 100 km</td>
+              </tr>
+              <tr>
+                <td><strong>Dilerlik kafolati</strong></td>
+                <td><span class="comp-badge">3 yil / 100,000 km</span></td>
+                <td><span class="comp-badge">3 yil / 100,000 km</span></td>
+              </tr>
+              <tr>
+                <td><strong>Band qilish</strong></td>
+                <td><button type="button" class="btn btn-primary comp-book-btn" id="compBook1">Band Qilish</button></td>
+                <td><button type="button" class="btn btn-primary comp-book-btn" id="compBook2">Band Qilish</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="section section-about">
+    <div class="container">
+      
+      <div class="about-grid">
+        
+        <!-- Chap tomon: Kompaniya ma'lumotlari -->
+        <div class="about-content">
+          <span class="section-badge"><i class="fa-solid fa-building"></i> Kompaniya Haqida</span>
+          <h2 class="section-title" style="text-align: left; margin-bottom: 1.25rem;">
+            Ishonchli va Zamonaviy <br>
+            <span class="text-accent">AUTO MOTORS</span> Avtosaloni
+          </h2>
+          
+          <p class="about-lead">
+            <strong>AUTO MOTORS</strong> &mdash; O'zbekiston bo'ylab yangi (0 km) mahalliy va premium xorijiy avtomobillarni xarid qilishdagi eng yirik va ishonchli markazlardan biridir.
+          </p>
+
+          <p class="about-text">
+            Bizning bosh maqsadimiz &mdash; har bir xaridorga o'z orzusidagi avtomobilni hech qanday ortiqcha navbatsiz, sun'iy kutishlarsiz, halol va 1 kunda rasmiylashtirib topshirishdir. Avtosalonimizda UzAuto Motorsning eng xaridorgir modellari (Cobalt, Gentra, Tracker, Onix, Malibu, Damas) hamda dunyo brendlari (BMW, Mercedes-Benz, Porsche, BYD) doimo salonda tayyor holda turadi.
+          </p>
+
+          <!-- Asosiy qadriyatlar -->
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+              <div>
+                <h4>100% Halol va Shaffof Shartnoma</h4>
+                <p>Hech qanday ko'zga ko'rinmas foizlar yoki yashirin to'lovlarsiz to'g'ridan-to'g'ri dilerlik kafolati.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+              <div>
+                <h4>1 Kunda Rasmiylashtirish</h4>
+                <p>Notarial shartnoma, davlat raqami, texnik pasport va sug'urta 24 soat ichida to'liq tayyorlab beriladi.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-shield-heart"></i></div>
+              <div>
+                <h4>3 Yillik Rasmiy Kafolat</h4>
+                <p>Har bir avtomobil salondan 0 km holatda, to'liq texnik ko'rikdan o'tgan holda topshiriladi.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yutuqlar ko'rsatkichi -->
+          <div class="about-stats-row">
+            <div class="a-stat">
+              <div class="a-icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
+              <span class="a-num">7+</span>
+              <span class="a-lbl">Yillik tajriba</span>
+            </div>
+            <div class="a-stat">
+              <div class="a-icon-wrap"><i class="fa-solid fa-users"></i></div>
+              <span class="a-num">5,000+</span>
+              <span class="a-lbl">Mamnun mijozlar</span>
+            </div>
+            <div class="a-stat">
+              <div class="a-icon-wrap"><i class="fa-solid fa-car-rear"></i></div>
+              <span class="a-num">250+</span>
+              <span class="a-lbl">Salonda mashinalar</span>
+            </div>
+            <div class="a-stat">
+              <div class="a-icon-wrap"><i class="fa-solid fa-medal"></i></div>
+              <span class="a-num">100%</span>
+              <span class="a-lbl">Rasmiy kafolat</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- O'ng tomon: Shourum vizuali va Manzil kartasi -->
+        <div class="about-visual">
+          <div class="about-image-card">
+            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1000&q=80" alt="AUTO MOTORS Avtosaloni">
+            <div class="about-image-overlay">
+              <div class="about-floating-badge">
+                <i class="fa-solid fa-location-dot text-accent"></i>
+                <div>
+                  <strong>Bosh Avtosalon:</strong>
+                  <span>Sirdaryo viloyati, Guliston shahar</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini qulaylik bloklari -->
+          <div class="about-quick-cards">
+            <div class="aq-card">
+              <i class="fa-solid fa-car text-accent"></i>
+              <div>
+                <strong>Zamonaviy Shourum</strong>
+                <span>Yorug' va keng ko'rgazma zali</span>
+              </div>
+            </div>
+            <div class="aq-card">
+              <i class="fa-solid fa-mug-hot text-accent"></i>
+              <div>
+                <strong>Lounge & Qulaylik</strong>
+                <span>Mijozlar uchun shinam kutish zali</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
 
   <!-- ==========================================================
 
@@ -1644,6 +2926,91 @@
 
       </div>
 
+      <!-- INTERAKTIV AVTO-KREDIT KALKULYATORI -->
+      <div class="calculator-card" id="loanCalculator">
+        <div class="calc-header-row">
+          <div>
+            <span class="section-badge"><i class="fa-solid fa-calculator"></i> Real-Vaqt Hisobi</span>
+            <h3 class="calc-title">Interaktiv Avto-Kredit Kalkulyatori</h3>
+            <p class="calc-desc">Avtomobilni tanlang, boshlang'ich to'lov va muddatni kiriting &mdash; oylik to'lovni bir zumda hisoblang!</p>
+          </div>
+          <div class="calc-rate-badge">
+            <span class="c-rate-num">18%</span>
+            <span>Yillik imtiyozli stavka</span>
+          </div>
+        </div>
+
+        <div class="calc-body-grid">
+          <!-- Parametrlar -->
+          <div class="calc-controls">
+            
+            <div class="calc-field">
+              <label for="calcCarSelect"><i class="fa-solid fa-car text-accent"></i> Avtomobil modelini tanlang:</label>
+              <select id="calcCarSelect" class="form-control calc-select"></select>
+            </div>
+
+            <div class="calc-field">
+              <div class="calc-label-row">
+                <label><i class="fa-solid fa-money-bill-transfer text-accent"></i> Boshlang'ich to'lov foizi:</label>
+                <span class="calc-pill" id="calcPercentDisplay">30%</span>
+              </div>
+              <input type="range" id="calcPercentRange" min="20" max="70" step="5" value="30" class="calc-slider">
+              <div class="calc-slider-limits">
+                <span>Min: 20%</span>
+                <span id="calcDownAmountText" class="calc-down-sum">$10,200</span>
+                <span>Max: 70%</span>
+              </div>
+            </div>
+
+            <div class="calc-field">
+              <label><i class="fa-solid fa-calendar-days text-accent"></i> Kredit muddati:</label>
+              <div class="calc-tenure-tabs" id="tenureTabs">
+                <button type="button" class="tenure-tab" data-months="12">12 oy (1 yil)</button>
+                <button type="button" class="tenure-tab" data-months="24">24 oy (2 yil)</button>
+                <button type="button" class="tenure-tab active" data-months="36">36 oy (3 yil)</button>
+                <button type="button" class="tenure-tab" data-months="48">48 oy (4 yil)</button>
+                <button type="button" class="tenure-tab" data-months="60">60 oy (5 yil)</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Natijalar ko'rsatgichi -->
+          <div class="calc-result-box">
+            <div class="calc-main-result">
+              <span class="res-label">Taxminiy oylik to'lov:</span>
+              <div class="res-amount" id="resMonthlyPayment">$780 / oy</div>
+              <span class="res-subtext"><i class="fa-solid fa-circle-check text-success"></i> Rasmiy bank hamkorligi doirasida</span>
+            </div>
+
+            <div class="calc-summary-list">
+              <div class="cs-row">
+                <span>Avtomobil narxi:</span>
+                <strong id="csCarPrice">$34,000</strong>
+              </div>
+              <div class="cs-row">
+                <span>Boshlang'ich to'lov:</span>
+                <strong id="csDownPay">$10,200</strong>
+              </div>
+              <div class="cs-row">
+                <span>Kreditga olingan summa:</span>
+                <strong id="csLoanAmount">$23,800</strong>
+              </div>
+              <div class="cs-row">
+                <span>KASKO sug'urtasi:</span>
+                <strong style="color: #34d399;"><i class="fa-solid fa-gift"></i> 100% Bepul</strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="calcSubmitBtn" style="width: 100%; justify-content: center;">
+              <i class="fa-solid fa-file-signature"></i>
+              <span>Ushbu hisob bilan ariza yuborish</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
   </section>
@@ -1653,6 +3020,257 @@
        5. AFZALLIKLAR VA XIZMATLAR
 
        ========================================================== -->
+
+  
+  <!-- ==========================================================
+       TRADE-IN KALKULYATORI (ESKI MASHINANI YANGISIGA ALMASHTIRISH)
+       ========================================================== -->
+  <section id="trade-in" class="section section-tradein">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-arrows-rotate"></i> Trade-In Dasturi</span>
+        <h2 class="section-title">Eski Mashinangizni Yangisiga Almashtiring</h2>
+        <p class="section-desc">Eski mashinangiz ko'rsatkichlarini kiriting — biz uni bozor narxida baholaymiz va yangi mashinaga to'lanadigan farqni bir zumda hisoblaymiz!</p>
+      </div>
+
+      <div class="tradein-card">
+        <div class="tradein-grid">
+          
+          <!-- Chap tomon: Eski mashina ma'lumotlari -->
+          <div class="tradein-col">
+            <div class="tradein-col-header">
+              <span class="step-num">1</span>
+              <div>
+                <h3>Sizning Hozirgi Mashinangiz</h3>
+                <p>Eski avtomobilingiz haqida ma'lumotlarni kiriting</p>
+              </div>
+            </div>
+
+            <div class="tradein-form">
+              <div class="t-field">
+                <label for="tiBrand"><i class="fa-solid fa-car text-accent"></i> Ishlab chiqaruvchi brend:</label>
+                <select id="tiBrand" class="form-control">
+                  <option value="chevrolet">Chevrolet / UzAuto</option>
+                  <option value="daewoo">Daewoo</option>
+                  <option value="kia">Kia</option>
+                  <option value="byd">BYD</option>
+                  <option value="hyundai">Hyundai</option>
+                  <option value="other">Boshqa xorijiy brend</option>
+                </select>
+              </div>
+
+              <div class="t-field">
+                <label for="tiModel"><i class="fa-solid fa-list-check text-accent"></i> Modelni tanlang:</label>
+                <select id="tiModel" class="form-control">
+                  <option value="cobalt" data-base="11000">Chevrolet Cobalt (Style / LTZ)</option>
+                  <option value="gentra" data-base="11500">Chevrolet Gentra / Lacetti</option>
+                  <option value="nexia3" data-base="9000">Chevrolet Nexia 3 (Ravon R3)</option>
+                  <option value="spark" data-base="8500">Chevrolet Spark (4-Pozitsiya)</option>
+                  <option value="damas" data-base="7000">Chevrolet Damas D2</option>
+                  <option value="malibu" data-base="22000">Chevrolet Malibu 2 Turbo</option>
+                  <option value="tracker" data-base="17000">Chevrolet Tracker 2</option>
+                  <option value="nexia2" data-base="5500">Daewoo Nexia 2 (DOHC)</option>
+                  <option value="matiz" data-base="3800">Daewoo Matiz Best</option>
+                  <option value="other" data-base="10000">Boshqa model</option>
+                </select>
+              </div>
+
+              <div class="t-field-row">
+                <div class="t-field">
+                  <label for="tiYear"><i class="fa-solid fa-calendar text-accent"></i> Yili:</label>
+                  <select id="tiYear" class="form-control">
+                    <option value="2024">2024 yil</option>
+                    <option value="2023">2023 yil</option>
+                    <option value="2022" selected>2022 yil</option>
+                    <option value="2021">2021 yil</option>
+                    <option value="2020">2020 yil</option>
+                    <option value="2019">2019 yil</option>
+                    <option value="2018">2018 yil</option>
+                    <option value="2017">2017 yil</option>
+                    <option value="2015">2015 yil va oldin</option>
+                  </select>
+                </div>
+
+                <div class="t-field">
+                  <label for="tiCondition"><i class="fa-solid fa-circle-check text-accent"></i> Holati:</label>
+                  <select id="tiCondition" class="form-control">
+                    <option value="1.0" selected>A'lo (Kraska toza, benuqson)</option>
+                    <option value="0.92">Yaxshi (Kichik petno / chaqa bor)</option>
+                    <option value="0.84">O'rtacha (Ta'mir talab joylari bor)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="t-field">
+                <div class="calc-label-row">
+                  <label><i class="fa-solid fa-road text-accent"></i> Yurgan masofasi:</label>
+                  <span class="calc-pill" id="tiMileageDisplay">45,000 km</span>
+                </div>
+                <input type="range" id="tiMileageRange" min="5000" max="250000" step="5000" value="45000" class="calc-slider">
+                <div class="calc-slider-limits">
+                  <span>0 km</span>
+                  <span>100,000 km</span>
+                  <span>250,000+ km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- O'ng tomon: Yangi mashina tanlash & Hisob-kitob -->
+          <div class="tradein-col tradein-result-col">
+            <div class="tradein-col-header">
+              <span class="step-num">2</span>
+              <div>
+                <h3>Tanlagan Yangi Mashinangiz</h3>
+                <p>Salondan qaysi yangi avtomobilni olmoqchisiz?</p>
+              </div>
+            </div>
+
+            <div class="t-field">
+              <label for="tiNewCarSelect"><i class="fa-solid fa-car-side text-accent"></i> Yangi modelni tanlang:</label>
+              <select id="tiNewCarSelect" class="form-control"></select>
+            </div>
+
+            <!-- Natijalar bloki -->
+            <div class="tradein-summary-box">
+              <div class="ti-sum-row">
+                <span>Eski mashinangiz bahosi:</span>
+                <strong id="tiOldPriceDisplay" class="text-success">$9,800</strong>
+              </div>
+              <div class="ti-sum-row">
+                <span>Yangi mashina narxi:</span>
+                <strong id="tiNewPriceDisplay">$21,500</strong>
+              </div>
+              <div class="ti-sum-divider"></div>
+              <div class="ti-sum-row ti-total-row">
+                <span>To'lanadigan farq summasi:</span>
+                <strong id="tiDiffDisplay" class="text-accent">$11,700</strong>
+              </div>
+              <div class="ti-sum-row">
+                <span>Kreditga oylik to'lov (36 oy):</span>
+                <strong id="tiMonthlyCreditDisplay" style="color: #38bdf8;">$383 / oy</strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="tiSubmitBtn" style="width: 100%; justify-content: center;">
+              <i class="fa-solid fa-file-contract"></i>
+              <span>Trade-In Arizasini Yuborish</span>
+            </button>
+            <p class="ti-guarantee-note"><i class="fa-solid fa-certificate text-accent"></i> 1 soatda bepul texnik ko'rik va notarial rasmiylashtirish kafolatlanadi.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       3. YOQILG'I VA ELEKTR TEJAMKORLIK KALKULYATORI (#fuel-calc)
+       ========================================================== -->
+  <section id="fuel-calc" class="section section-fuel-calc">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-gas-pump text-accent"></i> Tejamkorlik Tahlili</span>
+        <h2 class="section-title">Benzin vs Gibrid / Elektr: Qancha Pul Tejaysiz?</h2>
+        <p class="section-desc">Kunlik yuradigan masofangizni belgilang va 1 yillik yoqilg'i xarajatlarini BYD va elektromobillar bilan taqqoslang.</p>
+      </div>
+
+      <div class="fuel-calc-box">
+        <!-- Kunlik masofa slayderi -->
+        <div class="fc-slider-card">
+          <div class="fc-slider-header">
+            <div class="fc-slider-label">
+              <i class="fa-solid fa-road text-accent"></i>
+              <span>Kunlik o'rtacha masofa:</span>
+            </div>
+            <div class="fc-slider-val" id="fcDistanceVal">50 km / kun</div>
+          </div>
+          <input type="range" id="fcRange" min="10" max="200" step="5" value="50" class="fc-range-input">
+          <div class="fc-range-ticks">
+            <span>10 km</span>
+            <span>50 km</span>
+            <span>100 km</span>
+            <span>150 km</span>
+            <span>200 km</span>
+          </div>
+          <p class="fc-subtext"><i class="fa-solid fa-info-circle text-gold"></i> Oyiga taxminan <strong id="fcMonthlyKm">1,500 km</strong>, yiliga <strong id="fcYearlyKm">18,000 km</strong> yo'l bosasiz.</p>
+        </div>
+
+        <!-- Yonma-yon taqqoslash kartalari -->
+        <div class="fc-comparison-grid">
+          <!-- Benzinli mashina -->
+          <div class="fc-card fc-card-petrol">
+            <div class="fc-card-badge"><i class="fa-solid fa-gas-pump"></i> Standart Benzinli</div>
+            <h4>Chevrolet Cobalt / Gentra / Malibu</h4>
+            <div class="fc-spec-row">
+              <span>O'rtacha sarf:</span>
+              <strong>8.5 L / 100 km</strong>
+            </div>
+            <div class="fc-spec-row">
+              <span>Benzin narxi (Ai-92):</span>
+              <strong>12,000 so'm / L</strong>
+            </div>
+            <div class="fc-divider"></div>
+            <div class="fc-cost-item">
+              <span>Oylik benzin xarajati:</span>
+              <div class="fc-cost-num" id="petrolMonthlyCost">1 530 000 so'm</div>
+            </div>
+            <div class="fc-cost-item">
+              <span>1 yillik xarajat:</span>
+              <div class="fc-cost-num-big text-muted" id="petrolYearlyCost">18 360 000 so'm</div>
+            </div>
+          </div>
+
+          <!-- Gibrid / EV mashina -->
+          <div class="fc-card fc-card-ev">
+            <div class="fc-card-badge fc-badge-eco"><i class="fa-solid fa-bolt"></i> BYD DM-i Gibrid / EV</div>
+            <h4>BYD Song Plus DM-i / Chazor</h4>
+            <div class="fc-spec-row">
+              <span>O'rtacha sarf:</span>
+              <strong>4.0 L / 100 km (yoki EV)</strong>
+            </div>
+            <div class="fc-spec-row">
+              <span>Quvvatlash / Gibrid:</span>
+              <strong>~4,800 so'm / ekvivalent</strong>
+            </div>
+            <div class="fc-divider"></div>
+            <div class="fc-cost-item">
+              <span>Oylik xarajat:</span>
+              <div class="fc-cost-num text-success" id="evMonthlyCost">612 000 so'm</div>
+            </div>
+            <div class="fc-cost-item">
+              <span>1 yillik xarajat:</span>
+              <div class="fc-cost-num-big text-success" id="evYearlyCost">7 344 000 so'm</div>
+            </div>
+          </div>
+
+          <!-- Sof Tejamkorlik Natijasi -->
+          <div class="fc-card fc-card-savings">
+            <div class="fc-card-badge fc-badge-gold"><i class="fa-solid fa-sack-dollar"></i> Sof Tejamkorlik</div>
+            <h4>Sizning Yutug'ingiz</h4>
+            
+            <div class="savings-highlight-box">
+              <span class="sh-label">1 yilda tejaladigan sof mablag':</span>
+              <div class="sh-amount" id="savingsYearlyText">11 016 000 so'm</div>
+              <span class="sh-sub" id="savingsYearlyUsd">(Taxminan $857)</span>
+            </div>
+
+            <div class="savings-5yr-box">
+              <span class="sh-label-sm">5 yillik jami tejamkorlik:</span>
+              <strong class="sh-5yr-num" id="savings5yrText">55 080 000 so'm ($4,285)</strong>
+              <p class="sh-hint">💡 Bu summa yangi mashina kreditining katta qismini o'z-o'zidan qoplaydi!</p>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="btnExploreEvs" style="width: 100%; justify-content: center; margin-top: 1rem;">
+              <i class="fa-solid fa-bolt"></i>
+              <span>BYD va Gibrid Modellarni Ko'rish</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="services" class="section section-alt">
 
@@ -1736,11 +3354,300 @@
 
   </section>
 
+
+  <!-- ==========================================================
+       7. ONLAYN KASKO VA SUG'URTA HISOBBLAGICH (#insurance)
+       ========================================================== -->
+  <section id="insurance" class="section section-insurance">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-shield-halved text-accent"></i> Rasmiy Sug'urta Markazi</span>
+        <h2 class="section-title">Onlayn KASKO va Majburiy Sug'urta Hisoblagich</h2>
+        <p class="section-desc">Avtomobilingiz uchun rasmiy kafolatlangan KASKO yoki majburiy sug'urta polisini 30 soniyada hisoblang.</p>
+      </div>
+
+      <div class="insurance-calc-box">
+        <div class="ins-form-card">
+          <div class="form-field">
+            <label for="insCarSelect">Avtomobilingizni tanlang:</label>
+            <select id="insCarSelect" class="form-control">
+              <!-- JS dinamik 34 ta mashinani joylaydi -->
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>Sug'urta paketi:</label>
+            <div class="ins-packages-grid">
+              <label class="ins-pkg-label">
+                <input type="radio" name="ins_package" value="compulsory" class="ins-pkg-radio">
+                <div class="ins-pkg-box">
+                  <div class="ins-pkg-top">
+                    <strong>Majburiy Sug'urta</strong>
+                    <span class="ins-pkg-price">56 000 so'm / yil</span>
+                  </div>
+                  <p>Davlat qonuniy talabi (Uchinchi shaxslarga yetkazilgan zararni qoplash).</p>
+                </div>
+              </label>
+              <label class="ins-pkg-label">
+                <input type="radio" name="ins_package" value="kasko_std" class="ins-pkg-radio" checked>
+                <div class="ins-pkg-box">
+                  <div class="ins-pkg-top">
+                    <strong>KASKO Standart (1.8%)</strong>
+                    <span class="ins-pkg-badge">Tavsiya etiladi</span>
+                  </div>
+                  <p>YTH, o'g'irlik, yo'ldagi tosh tegishi va uchinchi shaxslarning noqonuniy harakati.</p>
+                </div>
+              </label>
+              <label class="ins-pkg-label">
+                <input type="radio" name="ins_package" value="kasko_vip" class="ins-pkg-radio">
+                <div class="ins-pkg-box">
+                  <div class="ins-pkg-top">
+                    <strong>KASKO VIP To'liq (2.8%)</strong>
+                    <span class="ins-pkg-badge-vip">100% Himoya</span>
+                  </div>
+                  <p>Barcha xatarlar + Tabiiy ofatlar + 24/7 Bepul evakuator + To'liq yangi mashina berish kafolati.</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Haydovchilik tajribangiz:</label>
+            <div class="ins-exp-pills" id="insExpPills">
+              <button type="button" class="ins-exp-pill" data-exp="1">1-2 yil (Standart)</button>
+              <button type="button" class="ins-exp-pill active" data-exp="3">3-5 yil (-5% Chegirma)</button>
+              <button type="button" class="ins-exp-pill" data-exp="5">5+ yil (-10% VIP Chegirma)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Natija paneli -->
+        <div class="ins-summary-card">
+          <div class="ins-sum-header">
+            <span class="ins-sum-tag"><i class="fa-solid fa-certificate"></i> Hisoblangan Sug'urta Polisi</span>
+            <div class="ins-sum-total" id="insYearlyTotal">$612 / yil</div>
+            <span class="ins-sum-monthly" id="insMonthlyTotal">yoki oyiga $51 dan</span>
+          </div>
+
+          <div class="ins-details-list">
+            <div class="ins-detail-row">
+              <span>Tanlangan avtomobil:</span>
+              <strong id="insCarName">Chevrolet Malibu 2 Premier</strong>
+            </div>
+            <div class="ins-detail-row">
+              <span>Avtomobil qiymati:</span>
+              <strong id="insCarPriceVal">$34,000</strong>
+            </div>
+            <div class="ins-detail-row">
+              <span>Sug'urta qoplamasi:</span>
+              <strong class="text-success" id="insCoverageVal">100% Bozor narxi miqdorida</strong>
+            </div>
+            <div class="ins-detail-row">
+              <span>Mijoz chegirmasi:</span>
+              <strong class="text-gold" id="insDiscountVal">5% Haydovchilik tajribasi uchun</strong>
+            </div>
+          </div>
+
+          <div class="ins-perks">
+            <div class="ins-perk"><i class="fa-solid fa-circle-check text-success"></i> Rasmiy servis markazida ta'mirlash</div>
+            <div class="ins-perk"><i class="fa-solid fa-circle-check text-success"></i> 24/7 Tezkor avariyalik evakuator butun O'zbekiston bo'ylab</div>
+            <div class="ins-perk"><i class="fa-solid fa-circle-check text-success"></i> Shartnoma 15 daqiqada onlayn rasmiylashtiriladi</div>
+          </div>
+
+          <a href="https://t.me/+998973419500" target="_blank" class="btn btn-primary" id="insOrderBtn" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Sug'urtani Rasmiylashtirish (Telegram)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==========================================================
 
        6. ALOQA VA TEST-DRAYVGA YOZILISH (Pure HTML Form)
 
        ========================================================== -->
+
+
+  <!-- ==========================================================
+       MIJOZLAR SHARHLARI (CUSTOMER TESTIMONIALS)
+       ========================================================== -->
+  <section id="reviews" class="section section-reviews">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-star text-gold"></i> Mijozlarimiz Fikrlari</span>
+        <h2 class="section-title">5,000+ Mamnun Xaridorlar</h2>
+        <p class="section-desc">Bizdan 0 km yangi avtomobil xarid qilgan yurtdoshlarimizning haqiqiy sharhlari.</p>
+      <div class="reviews-cta-row" style="text-align: center; margin-top: 1.25rem;">
+        <button type="button" class="btn btn-primary" id="openReviewModalBtn">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span>O'z Fikringizni Qoldiring</span>
+        </button>
+      </div>
+      </div>
+
+      <div class="reviews-grid">
+        
+        <!-- Sharh 1 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Gulistondagi salonidan Chevrolet Cobalt Style avtomobilini xarid qildim. 1 kunda nomimga rasmiylashtirib, davlat raqamini topshirishdi. Boshlang'ich 25% to'lab, qolganini qulay kreditga oldim. Xizmat ko'rsatish a'lo darajada!"
+          </p>
+          <div class="reviewer-info">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Sardorbek Tursunov" class="reviewer-avatar">
+            <div>
+              <strong>Sardorbek Tursunov</strong>
+              <span>Guliston shahar &bull; <em class="review-car-tag">Cobalt Style AT</em></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sharh 2 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Malibu 2 Premier mashinasini kreditga olish uchun ancha joylarni ko'rib chiqqandim. AUTO MOTORSda eng past 18% stavka va KASKO sug'urtasini bepul berishdi. Hech qanday yashirin to'lovlarsiz toza shartnoma tuzildi."
+          </p>
+          <div class="reviewer-info">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Jasur Alimov" class="reviewer-avatar">
+            <div>
+              <strong>Jasur Alimov</strong>
+              <span>Toshkent shahar &bull; <em class="review-car-tag">Malibu 2 Premier</em></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sharh 3 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Oilamiz uchun yangi Tracker 2 Premier oldik. Avtosalon xodimlari juda xushmuomala, barcha texnik qulayliklarini tushuntirib berishdi. Test-drayv qilib ko'rish imkoniyati bo'lgani ayniqsa yoqdi."
+          </p>
+          <div class="reviewer-info">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Nilufar Karimova" class="reviewer-avatar">
+            <div>
+              <strong>Nilufar Karimova</strong>
+              <span>Samarqand &bull; <em class="review-car-tag">Tracker 2 Premier</em></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sharh 4 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Biznesim uchun Damas Van kerak edi. Boshqa joylarda kutish kerak deyishgandi, bu yerda esa 0 km yangi mashinani salondan darhol haydab ketdim. Trade-In orqali eski mashinamni ham yaxshi narxda hisoblashdi."
+          </p>
+          <div class="reviewer-info">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="Dilshodbek Yusupov" class="reviewer-avatar">
+            <div>
+              <strong>Dilshodbek Yusupov</strong>
+              <span>Sirdaryo viloyati &bull; <em class="review-car-tag">Damas D2 Van</em></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       KO'P BERILADIGAN SAVOLLAR (FAQ ACCORDION)
+       ========================================================== -->
+  <section id="faq" class="section section-alt">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-circle-question"></i> Savol-Javoblar</span>
+        <h2 class="section-title">Ko'p Beriladigan Savollar (FAQ)</h2>
+        <p class="section-desc">Avto-kredit, hujjatlar va kafolat bo'yicha eng muhim savollarga javoblar.</p>
+      </div>
+
+      <div class="faq-accordion-wrap">
+        
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span><i class="fa-solid fa-id-card text-accent"></i> Avtomobilni kreditga olish uchun qanday hujjatlar talab qilinadi?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Kredit yoki lizing rasmiylashtirish uchun mijozdan <strong>faqat fuqarolik pasporti (yoki ID-karta)</strong> talab qilinadi. Daromad to'g'risida ma'lumotnoma (spravka) yoki ortiqcha kafillar shart emas. Barcha tekshiruvlar salonning o'zida bank mutaxassislari tomonidan 30 daqiqada amalga oshiriladi.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span><i class="fa-solid fa-earth-asia text-accent"></i> Boshqa viloyat fuqarolariga ham avtomobil beriladimi?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Albatta!</strong> AUTO MOTORS O'zbekistonning barcha 12 ta viloyati, Toshkent shahri va Qoraqalpog'iston Respublikasi fuqarolariga bir xil imtiyozli shartlarda avtomobil taqdim etadi. Hujjatlar va davlat raqamlari qonuniy ravishda rasmiylashtirib beriladi.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span><i class="fa-solid fa-percent text-accent"></i> Boshlang'ich to'lov qancha va qancha muddatga beriladi?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Boshlang'ich to'lov avtomobil qiymatining <strong>20% dan boshlanadi</strong> (mijoz xohishiga ko'ra 30%, 50% yoki 70% to'lashi mumkin). To'lov muddati <strong>1 yildan 5 yilgacha (12 oydan 60 oygacha)</strong> tanlanadi. Muddat qancha uzun bo'lsa, oylik to'lov shuncha yengil bo'ladi.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span><i class="fa-solid fa-arrows-rotate text-accent"></i> Trade-In (eski mashinani almashtirish) qanday ishlaydi?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Eski avtomobilingiz bilan salonga kelasiz. Bizning mustaqil diagnostika mutaxassisimiz mashinangizni 20 daqiqada bozor narxida baholaydi. Baholangan summa yangi mashinaning boshlang'ich to'lovi sifatida qabul qilinadi va siz 1 kunda yangi 0 km avtomobilni minib ketasiz.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span><i class="fa-solid fa-file-circle-check text-accent"></i> Mashinani rasmiylashtirish va davlat raqamini olish necha kun davom etadi?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Barcha rasmiy jarayonlar (shartnoma, sug'urta, YHXX (GAI) ro'yxatdan o'tkazish va davlat raqami olish) <strong>bor-yo'g'i 1 ish kunida</strong> salon xodimlari tomonidan to'liq bajariladi. Siz hech qanday idoralarda navbatda turmaysiz.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 
   <section id="contact" class="section">
 
@@ -1812,6 +3719,31 @@
 
           </div>
 
+
+          <!-- Interaktiv Xarita va Navigator -->
+          <div class="contact-map-card">
+            <div class="map-header">
+              <i class="fa-solid fa-map-location-dot text-accent"></i>
+              <div>
+                <strong>Avtosalon Lokatsiyasi</strong>
+                <span>Guliston sh., Sirdaryo viloyati</span>
+              </div>
+            </div>
+            <div class="map-frame-wrap">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48639.12351239841!2d68.752391!3d40.493412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b206f477755b11%3A0x6b7fa09d845e2259!2sGuliston%2C%20Sirdaryo%20Region%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-nav-buttons">
+              <a href="https://yandex.uz/maps/?text=Guliston+shahar" target="_blank" class="map-btn map-btn-yandex">
+                <i class="fa-solid fa-route"></i>
+                <span>Yandex Navigator</span>
+              </a>
+              <a href="https://maps.google.com/?q=Guliston+Uzbekistan" target="_blank" class="map-btn map-btn-google">
+                <i class="fa-solid fa-location-arrow"></i>
+                <span>Google Maps</span>
+              </a>
+            </div>
+          </div>
+
           <!-- Telegram orqali yozish -->
 
           <a href="https://t.me/+998973419500" target="_blank" class="btn btn-glass" style="width: 100%; justify-content: center;">
@@ -1866,53 +3798,47 @@
 
             <label for="car-select">Avtomobil modelini tanlang *</label>
 
-            <select id="car-select" name="car_model" required class="form-control">
-
-              <option value="" disabled selected>Mashinani tanlang</option>
-
-              
-
-              <!-- O'zbekiston modellari -->
-
-              <optgroup label="🇺🇿 O'zbekiston Avtomobillari (UzAuto)">
-
-                <option value="Chevrolet Malibu 2 Premier">Chevrolet Malibu 2 Premier ($34,000)</option>
-
-                <option value="Chevrolet Tracker 2 Premier">Chevrolet Tracker 2 Premier ($21,500)</option>
-
-                <option value="Chevrolet Onix Premier 2">Chevrolet Onix Premier 2 ($18,500)</option>
-
-                <option value="Chevrolet Cobalt Style AT">Chevrolet Cobalt Style AT ($13,500)</option>
-
-                <option value="Chevrolet Gentra Black Edition">Chevrolet Gentra Black Edition ($14,000)</option>
-
-                <option value="Chevrolet Captiva 5 Premier">Chevrolet Captiva 5 Premier 7-o'rin ($29,500)</option>
-
-                <option value="Chevrolet Damas D2 Van">Chevrolet Damas D2 Van ($8,500)</option>
-
-                <option value="Kia Sonet Prestige">Kia Sonet Prestige (Jizzax) ($18,900)</option>
-
-              </optgroup>
-
-              <!-- Xorijiy modellar -->
-
-              <optgroup label="🌍 Premium & Xorijiy Import">
-
-                <option value="BMW M5 Competition">BMW M5 Competition ($145,000)</option>
-
-                <option value="Mercedes-Benz G63 AMG">Mercedes-Benz G63 AMG ($215,000)</option>
-
-                <option value="Porsche 911 Carrera S">Porsche 911 Carrera S ($165,000)</option>
-
-                <option value="BYD Yangwang U8">BYD Yangwang U8 Off-Road ($152,000)</option>
-
-                <option value="Chevrolet Tahoe High Country">Chevrolet Tahoe High Country ($94,000)</option>
-
-                <option value="Audi RS7 Sportback">Audi RS7 Sportback ($138,000)</option>
-
-              </optgroup>
-
-            </select>
+                          <select id="car-select" name="car_model" class="form-control" required>
+                <option value="" disabled selected>Avtomobil modelini tanlang</option>
+                <optgroup label="O'zbekiston Avtomobillari (UzAuto & Jizzax)">
+                  <option value="Malibu 2">Chevrolet Malibu 2 Premier ($34,000)</option>
+                  <option value="Tracker 2">Chevrolet Tracker 2 Premier ($21,500)</option>
+                  <option value="Onix">Chevrolet Onix Premier 2 Plus ($18,500)</option>
+                  <option value="Cobalt">Chevrolet Cobalt 4-Pozitsiya AT ($13,500)</option>
+                  <option value="Gentra">Chevrolet Gentra 3-Pozitsiya ($14,000)</option>
+                  <option value="Captiva">Chevrolet Captiva 5 Premier ($29,500)</option>
+                  <option value="Damas">Chevrolet Damas D2 Van ($8,500)</option>
+                  <option value="Sonet">Kia Sonet Prestige ($18,900)</option>
+                  <option value="Monza">Chevrolet Monza 1.5L Plus ($19,500)</option>
+                  <option value="Spark">Chevrolet Spark 4-Pozitsiya AT ($10,500)</option>
+                  <option value="Equinox">Chevrolet Equinox RS 2.0 Turbo ($38,000)</option>
+                  <option value="Traverse">Chevrolet Traverse Premier 3.6L ($59,000)</option>
+                  <option value="Labo">Chevrolet Labo Pick-Up ($8,200)</option>
+                  <option value="Kia K5">Kia K5 GT-Line 2.5L ($33,000)</option>
+                  <option value="Sportage">Kia Sportage X-Line AWD ($34,500)</option>
+                  <option value="Seltos">Kia Seltos Luxe 2.0L ($26,000)</option>
+                  <option value="Song Plus">BYD Song Plus DM-i Champion ($29,500)</option>
+                  <option value="Chazor">BYD Chazor DM-i Destroyer ($19,800)</option>
+                </optgroup>
+                <optgroup label="Premium & Xorijiy Import Superkarlar">
+                  <option value="BMW M5">BMW M5 Competition ($145,000)</option>
+                  <option value="G63 AMG">Mercedes-Benz G63 AMG ($215,000)</option>
+                  <option value="Porsche 911">Porsche 911 Carrera S ($165,000)</option>
+                  <option value="Yangwang U8">BYD Yangwang U8 Off-Road ($152,000)</option>
+                  <option value="Tahoe">Chevrolet Tahoe High Country ($94,000)</option>
+                  <option value="RS7">Audi RS7 Sportback ($138,000)</option>
+                  <option value="Maybach S580">Mercedes-Maybach S580 4MATIC ($240,000)</option>
+                  <option value="BMW XM">BMW XM Label Red Flagman ($210,000)</option>
+                  <option value="Rolls-Royce Cullinan">Rolls-Royce Cullinan Black Badge ($480,000)</option>
+                  <option value="Lamborghini Urus">Lamborghini Urus Performante ($340,000)</option>
+                  <option value="Ferrari 296">Ferrari 296 GTB Gibrid ($370,000)</option>
+                  <option value="Range Rover SV">Range Rover SV Autobiography ($260,000)</option>
+                  <option value="Lexus LX600">Lexus LX 600 VIP Black Edition ($175,000)</option>
+                  <option value="Tesla Model S">Tesla Model S Plaid EV ($115,000)</option>
+                  <option value="Escalade-V">Cadillac Escalade-V Supercharged ($185,000)</option>
+                  <option value="Bentley Continental">Bentley Continental GT Speed ($310,000)</option>
+                </optgroup>
+              </select>
 
           </div>
 
@@ -1932,6 +3858,34 @@
 
             </select>
 
+          </div>
+
+                    <!-- 2. INTERAKTIV TEST-DRAYV VA TASHRIF KALENDARI -->
+          <div class="test-drive-picker-block" id="testDrivePickerBlock">
+            <div class="tdp-header">
+              <div class="tdp-title">
+                <i class="fa-solid fa-calendar-days text-accent"></i>
+                <span>Test-Drayv / Tashrif sanasi va vaqti:</span>
+              </div>
+              <span class="tdp-selected-tag" id="tdpSelectedTag">Bugun, 10:00 - 11:00</span>
+            </div>
+
+            <!-- Kunlar tanlovi -->
+            <div class="tdp-days-scroll" id="tdpDaysScroll">
+              <!-- JS dinamik 6 kunni joylaydi -->
+            </div>
+
+            <!-- Vaqt slotlari -->
+            <div class="tdp-slots-grid" id="tdpSlotsGrid">
+              <button type="button" class="slot-pill active" data-slot="10:00 - 11:00"><i class="fa-regular fa-clock"></i> 10:00 - 11:00</button>
+              <button type="button" class="slot-pill" data-slot="11:30 - 12:30"><i class="fa-regular fa-clock"></i> 11:30 - 12:30</button>
+              <button type="button" class="slot-pill" data-slot="14:00 - 15:00"><i class="fa-regular fa-clock"></i> 14:00 - 15:00</button>
+              <button type="button" class="slot-pill" data-slot="15:30 - 16:30"><i class="fa-regular fa-clock"></i> 15:30 - 16:30</button>
+              <button type="button" class="slot-pill" data-slot="17:00 - 18:00"><i class="fa-regular fa-clock"></i> 17:00 - 18:00</button>
+              <button type="button" class="slot-pill" data-slot="18:30 - 19:30"><i class="fa-regular fa-clock"></i> 18:30 - 19:30</button>
+            </div>
+            <input type="hidden" id="bookingSelectedDate" name="booking_date" value="">
+            <input type="hidden" id="bookingSelectedSlot" name="booking_slot" value="10:00 - 11:00">
           </div>
 
           <div class="form-field">
@@ -1991,6 +3945,10 @@
             O'zbekistondagi eng yirik yangi va premium avtomobillar saloni. UzAuto Motors va import modellari uchun rasmiy kafolat, qulay kredit va yuqori sifatli xizmat ko'rsatish markazi.
 
           </p>
+          <a href="#about" style="color: var(--accent); font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.45rem; margin-top: 0.85rem;">
+            <span>Kompaniya haqida batafsil</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
 
         </div>
 
@@ -2000,17 +3958,17 @@
 
           <ul class="footer-links">
 
-            <li><a href="#uzb-cars">Chevrolet Malibu 2</a></li>
+            <li><a href="#uzb-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Chevrolet Malibu 2</a></li>
 
-            <li><a href="#uzb-cars">Chevrolet Tracker 2</a></li>
+            <li><a href="#uzb-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Chevrolet Tracker 2</a></li>
 
-            <li><a href="#uzb-cars">Chevrolet Cobalt Style</a></li>
+            <li><a href="#uzb-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Chevrolet Cobalt Style</a></li>
 
-            <li><a href="#uzb-cars">Chevrolet Gentra Black</a></li>
+            <li><a href="#uzb-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Chevrolet Gentra Black</a></li>
 
-            <li><a href="#uzb-cars">Chevrolet Onix Premier</a></li>
+            <li><a href="#uzb-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Chevrolet Onix Premier</a></li>
 
-            <li><a href="#uzb-cars">Chevrolet Damas Van</a></li>
+            <li><a href="#uzb-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Chevrolet Damas Van</a></li>
 
           </ul>
 
@@ -2022,15 +3980,15 @@
 
           <ul class="footer-links">
 
-            <li><a href="#import-cars">BMW M5 Competition</a></li>
+            <li><a href="#import-cars"><i class="fa-solid fa-angle-right footer-icon"></i> BMW M5 Competition</a></li>
 
-            <li><a href="#import-cars">Mercedes G63 AMG</a></li>
+            <li><a href="#import-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Mercedes G63 AMG</a></li>
 
-            <li><a href="#import-cars">Porsche 911 Carrera</a></li>
+            <li><a href="#import-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Porsche 911 Carrera</a></li>
 
-            <li><a href="#import-cars">BYD Yangwang U8</a></li>
+            <li><a href="#import-cars"><i class="fa-solid fa-angle-right footer-icon"></i> BYD Yangwang U8</a></li>
 
-            <li><a href="#import-cars">Chevrolet Tahoe</a></li>
+            <li><a href="#import-cars"><i class="fa-solid fa-angle-right footer-icon"></i> Chevrolet Tahoe</a></li>
 
           </ul>
 
@@ -2067,7 +4025,103 @@
        MODAL: AVTOMOBIL TAFSILOTLARI (Quick View Modal)
        ========================================================== -->
   <div id="carModal" class="car-modal" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
-    <div class="car-modal-backdrop" id="carModalBackdrop"></div>
+    
+  <!-- ==========================================================
+       WISHLIST DRAWER (SAQLANGAN AVTOMOBILLAR PANELI)
+       ========================================================== -->
+  <div class="wishlist-drawer-backdrop" id="wishlistBackdrop"></div>
+  <aside class="wishlist-drawer" id="wishlistDrawer" aria-label="Saqlangan avtomobillar">
+    <div class="wishlist-drawer-header">
+      <div class="wd-title">
+        <i class="fa-solid fa-heart text-accent"></i>
+        <h3>Saqlanganlar (<span id="wishlistHeaderCount">0</span>)</h3>
+      </div>
+      <button type="button" class="wd-close-btn" id="wishlistCloseBtn" aria-label="Yopish">&times;</button>
+    </div>
+
+    <div class="wishlist-drawer-body" id="wishlistItemsList">
+      <!-- Dinamik saqlangan mashinalar ro'yxati -->
+    </div>
+
+    <div class="wishlist-drawer-footer">
+      <div class="wd-total-row">
+        <span>Jami qiymat:</span>
+        <strong id="wishlistTotalPrice">$0</strong>
+      </div>
+      <button type="button" class="btn btn-primary" id="wishlistOrderAllBtn" style="width: 100%; justify-content: center;">
+        <i class="fa-brands fa-telegram"></i>
+        <span>Barchasini Telegramga Yuborish</span>
+      </button>
+      <button type="button" class="btn-clear-wishlist" id="wishlistClearBtn">
+        <i class="fa-solid fa-trash-can"></i> Ro'yxatni tozalash
+      </button>
+    </div>
+  </aside>
+
+  <!-- Toast bildirishnoma -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check text-success"></i>
+    <span id="toastMessage">Avtomobil saqlandi!</span>
+  </div>
+
+  
+  <!-- ==========================================================
+       5. SHARH QOLDIRISH MODALI (SUBMIT REVIEW MODAL)
+       ========================================================== -->
+  <div class="review-modal" id="reviewModal" role="dialog" aria-modal="true" style="display: none;">
+    <div class="review-modal-backdrop" id="reviewModalBackdrop"></div>
+    <div class="review-modal-dialog">
+      <button type="button" class="car-modal-close" id="reviewModalClose" aria-label="Yopish">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="rm-header">
+        <span class="section-badge"><i class="fa-solid fa-star text-gold"></i> Mijoz Bahosi</span>
+        <h3>Avtosalonimiz Haqida Fikringizni Qoldiring</h3>
+        <p>Xaridingiz yoki xizmat sifatimiz bo'yicha samimiy fikringiz boshqa xaridorlar uchun juda muhim.</p>
+      </div>
+      <form id="reviewSubmitForm" class="rm-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="rmName">Ism-familiyangiz *</label>
+            <input type="text" id="rmName" required placeholder="Masalan: Azizbek Rahimov" class="form-control">
+          </div>
+          <div class="form-field">
+            <label for="rmCity">Shahar / Viloyat *</label>
+            <input type="text" id="rmCity" required placeholder="Masalan: Guliston shahar" class="form-control">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="rmCarSelect">Xarid qilingan avtomobil *</label>
+            <select id="rmCarSelect" class="form-control" required>
+              <!-- Dinamik to'ldiriladi -->
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Bahongiz: <strong id="rmRatingDisplay" class="text-gold">5.0 (A'lo)</strong></label>
+            <div class="star-rating-picker" id="starRatingPicker">
+              <i class="fa-solid fa-star star-pick active" data-rating="1"></i>
+              <i class="fa-solid fa-star star-pick active" data-rating="2"></i>
+              <i class="fa-solid fa-star star-pick active" data-rating="3"></i>
+              <i class="fa-solid fa-star star-pick active" data-rating="4"></i>
+              <i class="fa-solid fa-star star-pick active" data-rating="5"></i>
+            </div>
+            <input type="hidden" id="rmRatingValue" value="5">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="rmText">Sharhingiz matni *</label>
+          <textarea id="rmText" required rows="3" placeholder="Avtomobil qulayligi, rasmiylashtirish tezligi va xizmat sifati haqida yozing..." class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.85rem;">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Sharhni Chop Etish</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="car-modal-backdrop" id="carModalBackdrop"></div>
     <div class="car-modal-dialog">
       <button type="button" class="car-modal-close" id="carModalClose" aria-label="Yopish">
         <i class="fa-solid fa-xmark"></i>
@@ -2103,6 +4157,20 @@
             </div>
           </div>
 
+          <!-- Rang Tanlagich (Color Visualizer) -->
+          <div class="cm-color-block">
+            <div class="cm-color-header">
+              <span class="cm-section-title"><i class="fa-solid fa-palette text-accent"></i> Mavjud Kuzov Ranglari:</span>
+              <span class="cm-selected-color-name" id="cmSelectedColorName">Oq (Summit White)</span>
+            </div>
+            <div class="cm-color-swatches" id="cmColorSwatches">
+              <button type="button" class="color-swatch active" data-color="Oq (Summit White)" style="background: #ffffff;" title="Oq (Summit White)"></button>
+              <button type="button" class="color-swatch" data-color="Qora (Ebony Black)" style="background: #111827;" title="Qora (Ebony Black)"></button>
+              <button type="button" class="color-swatch" data-color="Kulrang (Shark Gray)" style="background: #64748b;" title="Kulrang (Shark Gray)"></button>
+              <button type="button" class="color-swatch" data-color="To'q Qizil (Crimson Red)" style="background: #b91c1c;" title="To'q Qizil (Crimson Red)"></button>
+            </div>
+          </div>
+
           <div class="cm-features-list">
             <div class="cm-feat-item"><i class="fa-solid fa-circle-check"></i> Rasmiy kafolat: 3 yil yoki 100,000 km</div>
             <div class="cm-feat-item"><i class="fa-solid fa-circle-check"></i> Salonda 0 km holatda tayyor, 1 kunda rasmiylashtirish</div>
@@ -2113,6 +4181,10 @@
             <button type="button" class="btn btn-primary" id="cmBookBtn">
               <i class="fa-solid fa-calendar-check"></i>
               <span>Ushbu mashinani band qilish</span>
+            </button>
+                        <button type="button" class="btn btn-glass" id="cmSoundBtn">
+              <i class="fa-solid fa-volume-high text-accent"></i>
+              <span>Dvigatel ovozi</span>
             </button>
             <a href="tel:+998973419500" class="btn btn-glass">
               <i class="fa-solid fa-phone text-accent"></i>
@@ -2141,7 +4213,7 @@
 
     // 1. Mobil menyudagi havola bosilganda menyuni avtomatik yopish
 
-    document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
+    document.querySelectorAll('.nav-menu .nav-link, .nav-drop-item').forEach(link => {
 
       link.addEventListener('click', () => {
 
@@ -2175,18 +4247,22 @@
 
         const notes = document.getElementById('client-notes').value.trim();
 
-        // Xabar matni
+        // Tanlangan test-drayv kuni va vaqti
+        const testDate = document.getElementById('bookingSelectedDate')?.value || '';
+        const testSlot = document.getElementById('bookingSelectedSlot')?.value || '';
+        const testInfo = testDate ? `\n📅 Test-drayv / Tashrif: ${testDate} (${testSlot})` : '';
 
-        const msgText = `🚗 AUTO MOTORS - Yangi buyurtma!\n\n👤 Mijoz: ${name}\n📞 Telefon: ${phone}\n🚘 Model: ${car}\n💳 To'lov shakli: ${payment}${notes ? '\n📝 Qo\'shimcha izoh: ' + notes : ''}`;
+        // Xabar matni
+        const msgText = `🚗 AUTO MOTORS - Yangi buyurtma!\n\n👤 Mijoz: ${name}\n📞 Telefon: ${phone}\n🚘 Model: ${car}\n💳 To'lov: ${payment}${testInfo}${notes ? '\n📝 Izoh: ' + notes : ''}`;
 
         // Muvaffaqiyat xabarini ko'rsatish
 
         if (formAlert) {
-
+          if (testDate) {
+            formAlert.querySelector('p').innerHTML = `Test-drayv uchun: <strong>${testDate} (${testSlot})</strong> belgilandi. Operatorimiz tez orada tasdiqlash uchun bog'lanadi!`;
+          }
           formAlert.classList.add('show');
-
           formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
         }
 
         // Telegram orqali operatorga xabarni tayyorlash
@@ -2317,7 +4393,1353 @@
       }
     });
 
+  
+    // ==========================================================
+    // 4. BARCHA YANGI FUNKSIYALAR JAVASCRIPT MOTORLARI
+    // ==========================================================
+
+    // A. VALYUTA ALMASHTIRGICH ($ USD <-> UZS SO'M)
+    const USD_TO_UZS = 12850;
+    let currentCurrency = 'USD';
+
+    function formatCurrency(usdAmount, isMonthly = false) {
+      if (currentCurrency === 'USD') {
+        return '$' + usdAmount.toLocaleString('en-US') + (isMonthly ? ' / oy' : '');
+      } else {
+        const uzs = Math.round(usdAmount * USD_TO_UZS);
+        if (uzs >= 1000000000) {
+          return (uzs / 1000000000).toFixed(2) + ' mlrd so\'m' + (isMonthly ? ' / oy' : '');
+        } else if (uzs >= 1000000) {
+          return (uzs / 1000000).toFixed(1) + ' mln so\'m' + (isMonthly ? ' / oy' : '');
+        } else {
+          return uzs.toLocaleString('ru-RU') + ' so\'m' + (isMonthly ? ' / oy' : '');
+        }
+      }
+    }
+
+    function updateAllPrices() {
+      // 1. Kartochkalardagi narxlarni yangilash
+      document.querySelectorAll('.car-card').forEach(card => {
+        const pMain = card.querySelector('.price-main');
+        const pSub = card.querySelector('.price-sub');
+        const usdPrice = parseInt(card.getAttribute('data-price')) || 0;
+        const usdCredit = parseInt(card.getAttribute('data-credit')) || 0;
+
+        if (usdPrice && pMain) {
+          pMain.innerText = formatCurrency(usdPrice);
+        }
+        if (usdCredit && pSub) {
+          pSub.innerText = 'Kredit: ' + formatCurrency(usdCredit, true);
+        }
+      });
+
+      // 2. Kalkulyator va Taqqoslashni qayta hisoblash
+      if (typeof updateCalculator === 'function') updateCalculator();
+      if (typeof updateComparison === 'function') updateComparison();
+    }
+
+    document.querySelectorAll('#currencyToggle .curr-pill').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('#currencyToggle .curr-pill').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentCurrency = this.getAttribute('data-curr');
+        updateAllPrices();
+      });
+    });
+
+    // B. JONLI QIDIRUV VA FILTRLASH
+    const carSearchInput = document.getElementById('carSearchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const filterPills = document.querySelectorAll('#filterPillsGroup .filter-pill');
+    const carSortSelect = document.getElementById('carSortSelect');
+    const filterCount = document.getElementById('filterCount');
+    const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+
+    let activeFilter = 'all';
+    let activeBudget = 'all';
+
+    function filterAndSortCars() {
+      const query = (carSearchInput ? carSearchInput.value : '').toLowerCase().trim();
+      const allCards = Array.from(document.querySelectorAll('.car-card'));
+      let visibleCount = 0;
+
+      // Filtrlash
+      allCards.forEach(card => {
+        const name = (card.getAttribute('data-name') || card.querySelector('.car-name')?.innerText || '').toLowerCase();
+        const origin = card.getAttribute('data-origin') || '';
+        const category = card.getAttribute('data-category') || '';
+
+        let matchesSearch = !query || name.includes(query);
+        let matchesFilter = false;
+
+        if (activeFilter === 'all') matchesFilter = true;
+        else if (activeFilter === 'uzb' && origin === 'uzb') matchesFilter = true;
+        else if (activeFilter === 'import' && origin === 'import') matchesFilter = true;
+        else if (activeFilter === 'sedan' && category.includes('sedan')) matchesFilter = true;
+        else if (activeFilter === 'suv' && category.includes('suv')) matchesFilter = true;
+        else if (activeFilter === 'ev' && category.includes('ev')) matchesFilter = true;
+
+        let matchesBudget = true;
+        if (activeBudget !== 'all') {
+          const creditVal = parseInt(card.getAttribute('data-credit')) || 0;
+          if (creditVal > activeBudget) {
+            matchesBudget = false;
+          }
+        }
+
+        if (matchesSearch && matchesFilter && matchesBudget) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Saralash
+      const sortVal = carSortSelect ? carSortSelect.value : 'default';
+      const grids = document.querySelectorAll('.cars-grid');
+
+      grids.forEach(grid => {
+        const cardsInGrid = Array.from(grid.querySelectorAll('.car-card'));
+        if (sortVal === 'price-asc') {
+          cardsInGrid.sort((a, b) => (parseInt(a.getAttribute('data-price')) || 0) - (parseInt(b.getAttribute('data-price')) || 0));
+        } else if (sortVal === 'price-desc') {
+          cardsInGrid.sort((a, b) => (parseInt(b.getAttribute('data-price')) || 0) - (parseInt(a.getAttribute('data-price')) || 0));
+        } else if (sortVal === 'power-desc') {
+          cardsInGrid.sort((a, b) => (parseInt(b.getAttribute('data-hp')) || 0) - (parseInt(a.getAttribute('data-hp')) || 0));
+        }
+        cardsInGrid.forEach(c => grid.appendChild(c));
+      });
+
+      if (filterCount) {
+        if (activeBudget !== 'all') {
+          filterCount.innerText = visibleCount + ' ta avtomobil topildi (Oylik $' + activeBudget + ' gacha)';
+        } else {
+          filterCount.innerText = visibleCount + ' ta avtomobil topildi';
+        }
+      }
+
+      if (resetFiltersBtn) {
+        resetFiltersBtn.style.display = (query || activeFilter !== 'all' || activeBudget !== 'all' || sortVal !== 'default') ? 'inline-block' : 'none';
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.style.display = query ? 'block' : 'none';
+      }
+    }
+
+    if (carSearchInput) carSearchInput.addEventListener('input', filterAndSortCars);
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', () => {
+        carSearchInput.value = '';
+        filterAndSortCars();
+      });
+    }
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', function() {
+        filterPills.forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        activeFilter = this.getAttribute('data-filter');
+        filterAndSortCars();
+      });
+    });
+
+    if (carSortSelect) carSortSelect.addEventListener('change', filterAndSortCars);
+    if (resetFiltersBtn) {
+      resetFiltersBtn.addEventListener('click', () => {
+        if (carSearchInput) carSearchInput.value = '';
+        activeFilter = 'all';
+        filterPills.forEach(p => p.classList.remove('active'));
+        filterPills[0]?.classList.add('active');
+        if (carSortSelect) carSortSelect.value = 'default';
+        filterAndSortCars();
+      });
+    }
+
+    // C. AVTO-KREDIT KALKULYATORI MOTOR
+        const allCarsData = [
+      // 1-8: O'zbekiston mavjud modellari
+      { id: 1, name: 'Chevrolet Malibu 2 Premier', price: 34000, hp: 253, engine: '2.0L Turbo', gear: '9-Avtomat', fuel: '8.5 L/100km', img: 'malibu.png' },
+      { id: 2, name: 'Chevrolet Tracker 2 Premier', price: 21500, hp: 132, engine: '1.2L Turbo', gear: '6-Avtomat', fuel: '7.0 L/100km', img: 'tracker.png' },
+      { id: 3, name: 'Chevrolet Onix Premier 2 Plus', price: 18500, hp: 132, engine: '1.2L Turbo', gear: '6-Avtomat', fuel: '6.5 L/100km', img: 'onix.png' },
+      { id: 4, name: 'Chevrolet Cobalt 4-Pozitsiya (Style AT)', price: 13500, hp: 106, engine: '1.5L DOHC', gear: '6-Avtomat', fuel: '7.2 L/100km', img: 'cobalt.png' },
+      { id: 5, name: 'Chevrolet Gentra 3-Pozitsiya (CDX)', price: 14000, hp: 107, engine: '1.5L 16V', gear: '6-Avtomat', fuel: '7.5 L/100km', img: 'gentra.png' },
+      { id: 6, name: 'Chevrolet Captiva 5 Premier 7-o\'rin', price: 29500, hp: 149, engine: '1.5L Turbo', gear: 'CVT Avtomat', fuel: '8.2 L/100km', img: 'captiva.png' },
+      { id: 7, name: 'Chevrolet Damas D2 Van', price: 8500, hp: 38, engine: '0.8L 3-Silindr', gear: 'Mexanika', fuel: '5.5 L/100km', img: 'damas.png' },
+      { id: 8, name: 'Kia Sonet Prestige Krossover', price: 18900, hp: 115, engine: '1.5L Smartstream', gear: 'IVT Avtomat', fuel: '6.8 L/100km', img: 'sonet.png' },
+      
+      // 9-18: O'zbekiston YANGI 10 ta modellari
+      { id: 9, name: 'Chevrolet Monza 1.5L Plus', price: 19500, hp: 113, engine: '1.5L VVT', gear: '6-Avtomat DCT', fuel: '5.9 L/100km', img: 'monza.png' },
+      { id: 10, name: 'Chevrolet Spark 4-Pozitsiya AT', price: 10500, hp: 85, engine: '1.25L DOHC', gear: '4-Avtomat', fuel: '6.2 L/100km', img: 'spark.png' },
+      { id: 11, name: 'Chevrolet Equinox RS 2.0 Turbo', price: 38000, hp: 236, engine: '2.0L Turbo', gear: '9-Avtomat AWD', fuel: '8.2 L/100km', img: 'equinox.png' },
+      { id: 12, name: 'Chevrolet Traverse Premier 3.6L', price: 59000, hp: 318, engine: '3.6L V6 VVT', gear: '9-Avtomat AWD', fuel: '10.5 L/100km', img: 'traverse.png' },
+      { id: 13, name: 'Chevrolet Labo Pick-Up', price: 8200, hp: 38, engine: '0.8L Benzin', gear: '5-Mexanika', fuel: '6.0 L/100km', img: 'labo.png' },
+      { id: 14, name: 'Kia K5 GT-Line 2.5L', price: 33000, hp: 194, engine: '2.5L Smartstream', gear: '8-Avtomat', fuel: '7.4 L/100km', img: 'k5.png' },
+      { id: 15, name: 'Kia Sportage X-Line AWD', price: 34500, hp: 190, engine: '2.5L GDI', gear: '8-Avtomat AWD', fuel: '7.9 L/100km', img: 'sportage.png' },
+      { id: 16, name: 'Kia Seltos Luxe 2.0L', price: 26000, hp: 149, engine: '2.0L MPI', gear: 'IVT Avtomat', fuel: '7.1 L/100km', img: 'seltos.png' },
+      { id: 17, name: 'BYD Song Plus DM-i Champion', price: 29500, hp: 218, engine: '1.5L DM-i Hybrid', gear: 'E-CVT Gibrid', fuel: '4.5 L/100km', img: 'songplus.png' },
+      { id: 18, name: 'BYD Chazor DM-i Destroyer', price: 19800, hp: 197, engine: '1.5L DM-i Gibrid', gear: 'E-CVT Gibrid', fuel: '3.8 L/100km', img: 'chazor.png' },
+
+      // 19-24: Xorijiy mavjud 6 ta modellari
+      { id: 19, name: 'BMW M5 Competition', price: 145000, hp: 625, engine: '4.4L V8 Turbo', gear: '8-Avtomat M', fuel: '11.5 L/100km', img: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80' },
+      { id: 20, name: 'Mercedes-Benz G63 AMG', price: 215000, hp: 585, engine: '4.0L Biturbo', gear: '9G-Tronic 4MATIC', fuel: '14.0 L/100km', img: 'https://images.unsplash.com/photo-1520031441872-265e4ff70366?auto=format&fit=crop&w=800&q=80' },
+      { id: 21, name: 'Porsche 911 Carrera S', price: 165000, hp: 450, engine: '3.0L Boxer', gear: '8-PDK Sport', fuel: '10.0 L/100km', img: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80' },
+      { id: 22, name: 'BYD Yangwang U8 Off-Road', price: 152000, hp: 1197, engine: 'Quad-Motor EV', gear: 'Avtomat 4x4', fuel: 'Gibrid EV', img: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80' },
+      { id: 23, name: 'Chevrolet Tahoe High Country', price: 94000, hp: 420, engine: '6.2L EcoTec V8', gear: '10-Avtomat', fuel: '13.5 L/100km', img: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80' },
+      { id: 24, name: 'Audi RS7 Sportback', price: 138000, hp: 600, engine: '4.0L TFSI V8', gear: 'Tiptronic Quattro', fuel: '11.8 L/100km', img: 'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80' },
+
+      // 25-34: Xorijiy YANGI 10 ta Premium modellari
+      { id: 25, name: 'Mercedes-Maybach S580 4MATIC', price: 240000, hp: 503, engine: '4.0L V8 Biturbo', gear: '9G-Tronic 4MATIC', fuel: '10.8 L/100km', img: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80' },
+      { id: 26, name: 'BMW XM Label Red Flagman', price: 210000, hp: 748, engine: '4.4L M Hybrid V8', gear: '8-M Steptronic', fuel: '8.8 L/100km', img: 'https://images.unsplash.com/photo-1580274455191-1c62238fa333?auto=format&fit=crop&w=800&q=80' },
+      { id: 27, name: 'Rolls-Royce Cullinan Black Badge', price: 480000, hp: 600, engine: '6.75L V12 Twin-Turbo', gear: '8-Avtomat Satellite', fuel: '16.5 L/100km', img: 'https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=800&q=80' },
+      { id: 28, name: 'Lamborghini Urus Performante', price: 340000, hp: 666, engine: '4.0L Twin-Turbo V8', gear: '8-Avtomat 4WD', fuel: '14.1 L/100km', img: 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80' },
+      { id: 29, name: 'Ferrari 296 GTB Gibrid', price: 370000, hp: 830, engine: '3.0L V6 Turbo PHEV', gear: '8-F1 Dual-Clutch', fuel: '7.4 L/100km', img: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80' },
+      { id: 30, name: 'Range Rover SV Autobiography', price: 260000, hp: 530, engine: '4.4L Twin-Turbo V8', gear: '8-Avtomat ZF AWD', fuel: '11.9 L/100km', img: 'https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=800&q=80' },
+      { id: 31, name: 'Lexus LX 600 VIP Black Edition', price: 175000, hp: 415, engine: '3.5L V6 Twin-Turbo', gear: '10-Avtomat Direct', fuel: '12.5 L/100km', img: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80' },
+      { id: 32, name: 'Tesla Model S Plaid EV', price: 115000, hp: 1020, engine: 'Tri-Motor AWD EV', gear: '1-Tezlik Avtomat', fuel: '600 km masofa', img: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80' },
+      { id: 33, name: 'Cadillac Escalade-V Supercharged', price: 185000, hp: 682, engine: '6.2L Supercharged V8', gear: '10-Avtomat Hydra', fuel: '15.2 L/100km', img: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80' },
+      { id: 34, name: 'Bentley Continental GT Speed', price: 310000, hp: 650, engine: '6.0L W12 TSI Turbo', gear: '8-Dual-Clutch AWD', fuel: '13.7 L/100km', img: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80' }
+    ];
+
+    const calcCarSelect = document.getElementById('calcCarSelect');
+    const calcPercentRange = document.getElementById('calcPercentRange');
+    const calcPercentDisplay = document.getElementById('calcPercentDisplay');
+    const calcDownAmountText = document.getElementById('calcDownAmountText');
+    const resMonthlyPayment = document.getElementById('resMonthlyPayment');
+    const resCarPrice = document.getElementById('resCarPrice');
+    const resDownPay = document.getElementById('resDownPay');
+    const csCarPrice = document.getElementById('csCarPrice');
+    const csDownPay = document.getElementById('csDownPay');
+    const csLoanAmount = document.getElementById('csLoanAmount');
+    const calcSubmitBtn = document.getElementById('calcSubmitBtn');
+
+    let calcTenureMonths = 36;
+
+    if (calcCarSelect) {
+      allCarsData.forEach((car, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.text = car.name + ' ($' + car.price.toLocaleString('en-US') + ')';
+        calcCarSelect.appendChild(opt);
+      });
+    }
+
+    function updateCalculator() {
+      if (!calcCarSelect) return;
+      const selectedIndex = parseInt(calcCarSelect.value) || 0;
+      const car = allCarsData[selectedIndex] || allCarsData[0];
+      const downPercent = parseInt(calcPercentRange.value) || 30;
+
+      const totalPrice = car.price;
+      const downPayment = Math.round(totalPrice * (downPercent / 100));
+      const loanPrincipal = totalPrice - downPayment;
+
+      // Anuitet foiz hisobi (18% yillik stavka)
+      const annualRate = 0.18;
+      const monthlyRate = annualRate / 12;
+      const monthlyPayment = Math.round(
+        (loanPrincipal * monthlyRate * Math.pow(1 + monthlyRate, calcTenureMonths)) /
+        (Math.pow(1 + monthlyRate, calcTenureMonths) - 1)
+      );
+
+      if (calcPercentDisplay) calcPercentDisplay.innerText = downPercent + '%';
+      if (calcDownAmountText) calcDownAmountText.innerText = formatCurrency(downPayment);
+      if (resMonthlyPayment) resMonthlyPayment.innerText = formatCurrency(monthlyPayment, true);
+      if (csCarPrice) csCarPrice.innerText = formatCurrency(totalPrice);
+      if (csDownPay) csDownPay.innerText = formatCurrency(downPayment) + ' (' + downPercent + '%)';
+      if (csLoanAmount) csLoanAmount.innerText = formatCurrency(loanPrincipal);
+    }
+
+    if (calcCarSelect) calcCarSelect.addEventListener('change', updateCalculator);
+    if (calcPercentRange) calcPercentRange.addEventListener('input', updateCalculator);
+
+    document.querySelectorAll('#tenureTabs .tenure-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('#tenureTabs .tenure-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        calcTenureMonths = parseInt(this.getAttribute('data-months')) || 36;
+        updateCalculator();
+      });
+    });
+
+    if (calcSubmitBtn) {
+      calcSubmitBtn.addEventListener('click', function() {
+        const car = allCarsData[parseInt(calcCarSelect.value) || 0];
+        const downPercent = calcPercentRange.value;
+        const select = document.getElementById('car-select');
+        if (select && car) {
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].text.toLowerCase().includes(car.name.toLowerCase().split(' ')[1])) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        }
+        const notes = document.getElementById('client-notes');
+        if (notes && car) {
+          notes.value = 'Hisoblangan kredit: ' + car.name + ', Boshlang\'ich to\'lov: ' + downPercent + '%, Muddat: ' + calcTenureMonths + ' oy.';
+        }
+        const contactSec = document.getElementById('contact');
+        if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // D. TAQQOSLASH (COMPARE TOOL) MOTOR
+    const compSel1 = document.getElementById('compareCar1');
+    const compSel2 = document.getElementById('compareCar2');
+
+    if (compSel1 && compSel2) {
+      allCarsData.forEach((car, i) => {
+        const opt1 = document.createElement('option');
+        opt1.value = i;
+        opt1.text = car.name;
+        compSel1.appendChild(opt1);
+
+        const opt2 = document.createElement('option');
+        opt2.value = i;
+        opt2.text = car.name;
+        compSel2.appendChild(opt2);
+      });
+      // Default: Cobalt vs Onix
+      compSel1.value = 3; // Cobalt
+      compSel2.value = 2; // Onix
+    }
+
+    function updateComparison() {
+      if (!compSel1 || !compSel2) return;
+      const c1 = allCarsData[parseInt(compSel1.value) || 0];
+      const c2 = allCarsData[parseInt(compSel2.value) || 1];
+
+      document.getElementById('compName1').innerText = c1.name;
+      document.getElementById('compName2').innerText = c2.name;
+
+      document.getElementById('compImg1').src = c1.img;
+      document.getElementById('compImg2').src = c2.img;
+
+      document.getElementById('compPrice1').innerText = formatCurrency(c1.price);
+      document.getElementById('compPrice2').innerText = formatCurrency(c2.price);
+
+      const m1 = Math.round((c1.price * 0.7 * (0.18/12) * Math.pow(1 + 0.18/12, 36)) / (Math.pow(1 + 0.18/12, 36) - 1));
+      const m2 = Math.round((c2.price * 0.7 * (0.18/12) * Math.pow(1 + 0.18/12, 36)) / (Math.pow(1 + 0.18/12, 36) - 1));
+      document.getElementById('compCredit1').innerText = formatCurrency(m1, true);
+      document.getElementById('compCredit2').innerText = formatCurrency(m2, true);
+
+      document.getElementById('compEngine1').innerText = c1.engine;
+      document.getElementById('compEngine2').innerText = c2.engine;
+
+      document.getElementById('compHp1').innerText = c1.hp + ' ot kuchi';
+      document.getElementById('compHp2').innerText = c2.hp + ' ot kuchi';
+
+      document.getElementById('compGear1').innerText = c1.gear;
+      document.getElementById('compGear2').innerText = c2.gear;
+
+      document.getElementById('compFuel1').innerText = c1.fuel;
+      document.getElementById('compFuel2').innerText = c2.fuel;
+
+      // Book buttons
+      document.getElementById('compBook1').onclick = () => {
+        selectCarAndScroll(c1.name);
+      };
+      document.getElementById('compBook2').onclick = () => {
+        selectCarAndScroll(c2.name);
+      };
+    }
+
+    function selectCarAndScroll(carName) {
+      const select = document.getElementById('car-select');
+      if (select) {
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].text.toLowerCase().includes(carName.toLowerCase().split(' ')[1])) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      const contactSec = document.getElementById('contact');
+      if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    if (compSel1) compSel1.addEventListener('change', updateComparison);
+    if (compSel2) compSel2.addEventListener('change', updateComparison);
+
+    // E. FAQ AKORDEON
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    
+    // ==========================================================
+    // 5. YANGI 6 TA SUPER FUNKSIYALAR JAVASCRIPT MOTORLARI
+    // ==========================================================
+
+    // ----------------------------------------------------------
+    // A. JONLI ISH VAQTI & ONLAYN STATUS INDIKATORI
+    // ----------------------------------------------------------
+    function updateShowroomStatus() {
+      const statusPill = document.getElementById('showroomStatus');
+      const statusText = document.getElementById('statusText');
+      if (!statusPill || !statusText) return;
+
+      const now = new Date();
+      const hour = now.getHours();
+      const isOpen = hour >= 9 && hour < 20;
+
+      if (isOpen) {
+        statusPill.classList.remove('status-closed');
+        statusPill.classList.add('status-open');
+        statusText.innerText = "Ochiq: 09:00 - 20:00 • Onlayn";
+      } else {
+        statusPill.classList.remove('status-open');
+        statusPill.classList.add('status-closed');
+        statusText.innerText = "Dam olish vaqti • Ochiladi: 09:00";
+      }
+    }
+    updateShowroomStatus();
+    setInterval(updateShowroomStatus, 60000);
+
+    // ----------------------------------------------------------
+    // B. SEVIMLILAR (WISHLIST) TIZIMI & LOCALSTORAGE
+    // ----------------------------------------------------------
+    let wishlist = [];
+    try {
+      wishlist = JSON.parse(localStorage.getItem('automotors_wishlist')) || [];
+    } catch (e) {
+      wishlist = [];
+    }
+
+    const wishlistToggleBtn = document.getElementById('wishlistToggleBtn');
+    const wishlistCloseBtn = document.getElementById('wishlistCloseBtn');
+    const wishlistBackdrop = document.getElementById('wishlistBackdrop');
+    const wishlistDrawer = document.getElementById('wishlistDrawer');
+    const wishlistBadge = document.getElementById('wishlistBadge');
+    const wishlistHeaderCount = document.getElementById('wishlistHeaderCount');
+    const wishlistItemsList = document.getElementById('wishlistItemsList');
+    const wishlistTotalPrice = document.getElementById('wishlistTotalPrice');
+    const wishlistOrderAllBtn = document.getElementById('wishlistOrderAllBtn');
+    const wishlistClearBtn = document.getElementById('wishlistClearBtn');
+    const toastNotification = document.getElementById('toastNotification');
+    const toastMessage = document.getElementById('toastMessage');
+
+    let toastTimer = null;
+    function showToast(msg) {
+      if (!toastNotification || !toastMessage) return;
+      toastMessage.innerText = msg;
+      toastNotification.classList.add('active');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toastNotification.classList.remove('active');
+      }, 3000);
+    }
+
+    function saveWishlist() {
+      try {
+        localStorage.setItem('automotors_wishlist', JSON.stringify(wishlist));
+      } catch (e) {}
+      updateWishlistUI();
+    }
+
+    function updateWishlistUI() {
+      // 1. Badge va hisoblagichlarni yangilash
+      const count = wishlist.length;
+      if (wishlistBadge) wishlistBadge.innerText = count;
+      if (wishlistHeaderCount) wishlistHeaderCount.innerText = count;
+
+      // 2. Kartochkalardagi yurakchalarni faollashtirish
+      document.querySelectorAll('.car-card').forEach(card => {
+        const name = card.getAttribute('data-name') || card.querySelector('.car-name')?.innerText.trim() || '';
+        const heartIcon = card.querySelector('.car-like-icon');
+        const heartI = card.querySelector('.car-like-icon i');
+        if (heartIcon && heartI) {
+          const isSaved = wishlist.some(item => item.name === name);
+          if (isSaved) {
+            heartIcon.classList.add('active');
+            heartI.className = 'fa-solid fa-heart text-accent';
+          } else {
+            heartIcon.classList.remove('active');
+            heartI.className = 'fa-regular fa-heart';
+          }
+        }
+      });
+
+      // 3. Drawer ro'yxatini render qilish
+      if (!wishlistItemsList) return;
+      if (wishlist.length === 0) {
+        wishlistItemsList.innerHTML = `
+          <div class="wishlist-empty">
+            <i class="fa-regular fa-heart"></i>
+            <h4>Hozircha saqlangan mashinalar yo'q</h4>
+            <p>Katalogdagi istalgan avtomobil yurakcha belgisini bosing va shu yerda solishtiring.</p>
+          </div>
+        `;
+        if (wishlistTotalPrice) wishlistTotalPrice.innerText = formatCurrency(0);
+        return;
+      }
+
+      let total = 0;
+      wishlistItemsList.innerHTML = '';
+      wishlist.forEach((item, index) => {
+        total += item.price;
+        const row = document.createElement('div');
+        row.className = 'wishlist-item';
+        row.innerHTML = `
+          <img src="${item.img}" alt="${item.name}" class="wi-img">
+          <div class="wi-info">
+            <h4 class="wi-name">${item.name}</h4>
+            <span class="wi-price">${formatCurrency(item.price)}</span>
+          </div>
+          <button type="button" class="wi-remove" title="O'chirish" data-index="${index}">&times;</button>
+        `;
+        wishlistItemsList.appendChild(row);
+      });
+
+      if (wishlistTotalPrice) wishlistTotalPrice.innerText = formatCurrency(total);
+
+      // O'chirish tugmalari
+      wishlistItemsList.querySelectorAll('.wi-remove').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const idx = parseInt(this.getAttribute('data-index'));
+          const removedName = wishlist[idx]?.name || '';
+          wishlist.splice(idx, 1);
+          saveWishlist();
+          showToast(removedName ? `${removedName} saqlanganlardan o'chirildi!` : "O'chirildi!");
+        });
+      });
+    }
+
+    // Kartochkadagi yurakchalarga bosish hodisasi
+    document.querySelectorAll('.car-card .car-like-icon').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const card = this.closest('.car-card');
+        if (!card) return;
+        const name = card.getAttribute('data-name') || card.querySelector('.car-name')?.innerText.trim() || '';
+        const price = parseInt(card.getAttribute('data-price')) || 0;
+        const img = card.querySelector('img')?.getAttribute('src') || '';
+
+        const existingIndex = wishlist.findIndex(item => item.name === name);
+        if (existingIndex !== -1) {
+          wishlist.splice(existingIndex, 1);
+          saveWishlist();
+          showToast(`${name} saqlanganlardan olib tashlandi.`);
+        } else {
+          wishlist.push({ name, price, img });
+          saveWishlist();
+          showToast(`❤️ ${name} saqlanganlarga qo'shildi!`);
+        }
+      });
+    });
+
+    // Drawer ochish / yopish
+    function openWishlistDrawer() {
+      if (wishlistDrawer) wishlistDrawer.classList.add('active');
+      if (wishlistBackdrop) wishlistBackdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      updateWishlistUI();
+    }
+
+    function closeWishlistDrawer() {
+      if (wishlistDrawer) wishlistDrawer.classList.remove('active');
+      if (wishlistBackdrop) wishlistBackdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (wishlistToggleBtn) wishlistToggleBtn.addEventListener('click', openWishlistDrawer);
+    if (wishlistCloseBtn) wishlistCloseBtn.addEventListener('click', closeWishlistDrawer);
+    if (wishlistBackdrop) wishlistBackdrop.addEventListener('click', closeWishlistDrawer);
+
+    if (wishlistClearBtn) {
+      wishlistClearBtn.addEventListener('click', () => {
+        if (wishlist.length === 0) return;
+        if (confirm("Saqlangan barcha avtomobillarni tozalashni xohlaysizmi?")) {
+          wishlist = [];
+          saveWishlist();
+          showToast("Saqlanganlar ro'yxati tozalandi.");
+        }
+      });
+    }
+
+    if (wishlistOrderAllBtn) {
+      wishlistOrderAllBtn.addEventListener('click', () => {
+        if (wishlist.length === 0) {
+          alert("Saqlangan mashinalar mavjud emas.");
+          return;
+        }
+        closeWishlistDrawer();
+        const namesList = wishlist.map((item, i) => `${i + 1}. ${item.name} (${formatCurrency(item.price)})`).join('%0A');
+        const tgText = `Assalomu alaykum! AutoMotors saytidan quyidagi saqlangan avtomobillar bo'yicha ma'lumot olmoqchiman:%0A%0A${namesList}%0A%0AMaslahat berishingizni so'rayman.`;
+        window.open(`https://t.me/+998973419500?text=${tgText}`, '_blank');
+      });
+    }
+
+    updateWishlistUI();
+
+    // ----------------------------------------------------------
+    // C. TRADE-IN KALKULYATORI MOTOR
+    // ----------------------------------------------------------
+    const tiBrand = document.getElementById('tiBrand');
+    const tiModel = document.getElementById('tiModel');
+    const tiYear = document.getElementById('tiYear');
+    const tiCondition = document.getElementById('tiCondition');
+    const tiMileageRange = document.getElementById('tiMileageRange');
+    const tiMileageDisplay = document.getElementById('tiMileageDisplay');
+    const tiNewCarSelect = document.getElementById('tiNewCarSelect');
+    const tiOldPriceDisplay = document.getElementById('tiOldPriceDisplay');
+    const tiNewPriceDisplay = document.getElementById('tiNewPriceDisplay');
+    const tiDiffDisplay = document.getElementById('tiDiffDisplay');
+    const tiMonthlyCreditDisplay = document.getElementById('tiMonthlyCreditDisplay');
+    const tiSubmitBtn = document.getElementById('tiSubmitBtn');
+
+    if (tiNewCarSelect) {
+      allCarsData.forEach((car, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.text = car.name + ' ($' + car.price.toLocaleString('en-US') + ')';
+        tiNewCarSelect.appendChild(opt);
+      });
+      tiNewCarSelect.value = 1; // Default Tracker 2
+    }
+
+    function calculateTradeIn() {
+      if (!tiModel || !tiYear || !tiCondition || !tiMileageRange || !tiNewCarSelect) return;
+
+      const basePrice = parseInt(tiModel.selectedOptions[0]?.getAttribute('data-base')) || 10000;
+      const year = parseInt(tiYear.value) || 2022;
+      const mileage = parseInt(tiMileageRange.value) || 45000;
+      const conditionMult = parseFloat(tiCondition.value) || 1.0;
+
+      // Amortizatsiya formulasi
+      const yearDiff = Math.max(0, 2024 - year);
+      const yearFactor = Math.max(0.4, 1 - (yearDiff * 0.045));
+      const mileageFactor = Math.max(0.6, 1 - ((mileage / 100000) * 0.07));
+
+      const oldCarPrice = Math.max(2000, Math.round(basePrice * yearFactor * mileageFactor * conditionMult));
+      const newCarIndex = parseInt(tiNewCarSelect.value) || 0;
+      const newCar = allCarsData[newCarIndex] || allCarsData[0];
+      const newCarPrice = newCar.price;
+
+      const diff = Math.max(0, newCarPrice - oldCarPrice);
+
+      // 36 oylik kredit hisobi farq summasiga
+      const annualRate = 0.18;
+      const monthlyRate = annualRate / 12;
+      const months = 36;
+      let monthlyCredit = 0;
+      if (diff > 0) {
+        monthlyCredit = Math.round(
+          (diff * monthlyRate * Math.pow(1 + monthlyRate, months)) /
+          (Math.pow(1 + monthlyRate, months) - 1)
+        );
+      }
+
+      if (tiMileageDisplay) tiMileageDisplay.innerText = mileage.toLocaleString('ru-RU') + ' km';
+      if (tiOldPriceDisplay) tiOldPriceDisplay.innerText = formatCurrency(oldCarPrice);
+      if (tiNewPriceDisplay) tiNewPriceDisplay.innerText = formatCurrency(newCarPrice);
+      if (tiDiffDisplay) tiDiffDisplay.innerText = formatCurrency(diff);
+      if (tiMonthlyCreditDisplay) tiMonthlyCreditDisplay.innerText = formatCurrency(monthlyCredit, true);
+    }
+
+    if (tiBrand) tiBrand.addEventListener('change', calculateTradeIn);
+    if (tiModel) tiModel.addEventListener('change', calculateTradeIn);
+    if (tiYear) tiYear.addEventListener('change', calculateTradeIn);
+    if (tiCondition) tiCondition.addEventListener('change', calculateTradeIn);
+    if (tiMileageRange) tiMileageRange.addEventListener('input', calculateTradeIn);
+    if (tiNewCarSelect) tiNewCarSelect.addEventListener('change', calculateTradeIn);
+
+    if (tiSubmitBtn) {
+      tiSubmitBtn.addEventListener('click', function() {
+        const oldModelName = tiModel?.selectedOptions[0]?.text || '';
+        const oldYearVal = tiYear?.value || '2022';
+        const oldKm = tiMileageRange?.value || '45000';
+        const newCar = allCarsData[parseInt(tiNewCarSelect?.value) || 0];
+
+        const notes = document.getElementById('client-notes');
+        if (notes && newCar) {
+          notes.value = `[Trade-In Buyurtmasi]: Eski mashina: ${oldModelName} (${oldYearVal} yil, ${oldKm} km). Yangi olinadigan: ${newCar.name}.`;
+        }
+
+        const select = document.getElementById('car-select');
+        if (select && newCar) {
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].text.toLowerCase().includes(newCar.name.toLowerCase().split(' ')[1])) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        }
+
+        const contactSec = document.getElementById('contact');
+        if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
+        showToast("Trade-In ma'lumotlari arizaga to'ldirildi!");
+      });
+    }
+
+    calculateTradeIn();
+
+    // ----------------------------------------------------------
+    // D. MAXSUS AKSIYA TAYMERI (COUNTDOWN TIMER)
+    // ----------------------------------------------------------
+    // Hozirgi oydan boshlab 4 kun 14 soatlik davriy aksiya
+    const cdDays = document.getElementById('cdDays');
+    const cdHours = document.getElementById('cdHours');
+    const cdMins = document.getElementById('cdMins');
+    const cdSecs = document.getElementById('cdSecs');
+
+    let promoTarget = localStorage.getItem('automotors_promo_end');
+    if (!promoTarget || new Date(promoTarget) <= new Date()) {
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 4);
+      targetDate.setHours(targetDate.getHours() + 14);
+      promoTarget = targetDate.toISOString();
+      localStorage.setItem('automotors_promo_end', promoTarget);
+    }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const target = new Date(promoTarget).getTime();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        if (cdDays) cdDays.innerText = '00';
+        if (cdHours) cdHours.innerText = '00';
+        if (cdMins) cdMins.innerText = '00';
+        if (cdSecs) cdSecs.innerText = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      if (cdDays) cdDays.innerText = String(days).padStart(2, '0');
+      if (cdHours) cdHours.innerText = String(hours).padStart(2, '0');
+      if (cdMins) cdMins.innerText = String(mins).padStart(2, '0');
+      if (cdSecs) cdSecs.innerText = String(secs).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ----------------------------------------------------------
+    // E. RANG TANLAGICH (COLOR VISUALIZER IN MODAL)
+    // ----------------------------------------------------------
+    let selectedModalColor = 'Oq (Summit White)';
+    document.querySelectorAll('#cmColorSwatches .color-swatch').forEach(swatch => {
+      swatch.addEventListener('click', function() {
+        document.querySelectorAll('#cmColorSwatches .color-swatch').forEach(s => s.classList.remove('active'));
+        this.classList.add('active');
+        selectedModalColor = this.getAttribute('data-color') || 'Oq (Summit White)';
+        const lbl = document.getElementById('cmSelectedColorName');
+        if (lbl) lbl.innerText = selectedModalColor;
+      });
+    });
+
+    // ----------------------------------------------------------
+    // F. PDF / RASMIY NARXLAR JADVALINI YUKLAB OLISH & CHOP ETISH
+    // ----------------------------------------------------------
+    const btnPdfCatalog = document.getElementById('btnPdfCatalog');
+    if (btnPdfCatalog) {
+      btnPdfCatalog.addEventListener('click', function() {
+        // Avtosalon kotirovka oynasini ochish va chop etish
+        window.print();
+      });
+    }
+
+    // Inits
+    updateCalculator();
+    updateComparison();
+    calculateTradeIn();
+
+
+    // ==========================================================
+    // 1. KUNDUZGI VA TUNGI REJIM (LIGHT & DARK THEME TOGGLE)
+    // ==========================================================
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const savedTheme = localStorage.getItem('automotors_theme') || 'dark';
+
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (themeIcon) {
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        }
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        if (themeIcon) {
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+        }
+      }
+      localStorage.setItem('automotors_theme', theme);
+    }
+    applyTheme(savedTheme);
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        applyTheme(newTheme);
+        showToast(newTheme === 'light' ? '☀️ Kunduzgi rejim yoqildi' : '🌙 Tungi rejim yoqildi');
+      });
+    }
+
+    // ==========================================================
+    // 2. OYLIK BYUDJET FILTRI (SMART BUDGET MATCHER)
+    // ==========================================================
+    const budgetPills = document.querySelectorAll('#budgetPillsWrap .budget-pill');
+    const budgetSliderBox = document.getElementById('budgetSliderBox');
+    const customBudgetRange = document.getElementById('customBudgetRange');
+    const customBudgetVal = document.getElementById('customBudgetVal');
+
+    budgetPills.forEach(pill => {
+      pill.addEventListener('click', function() {
+        budgetPills.forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        const b = this.getAttribute('data-budget');
+        if (b === 'all') {
+          activeBudget = 'all';
+          if (budgetSliderBox) budgetSliderBox.style.display = 'none';
+        } else if (b === 'custom') {
+          if (budgetSliderBox) budgetSliderBox.style.display = 'flex';
+          activeBudget = parseInt(customBudgetRange.value) || 500;
+        } else {
+          activeBudget = parseInt(b) || 'all';
+          if (budgetSliderBox) budgetSliderBox.style.display = 'none';
+        }
+        filterAndSortCars();
+      });
+    });
+
+    if (customBudgetRange) {
+      customBudgetRange.addEventListener('input', function() {
+        activeBudget = parseInt(this.value);
+        if (customBudgetVal) customBudgetVal.innerText = '$' + activeBudget + ' / oy';
+        filterAndSortCars();
+      });
+    }
+
+    // ==========================================================
+    // 3. INTERAKTIV TEST-DRAYV KALENDARI (6 KUN & SLOTLAR)
+    // ==========================================================
+    const tdpDaysScroll = document.getElementById('tdpDaysScroll');
+    const tdpSelectedTag = document.getElementById('tdpSelectedTag');
+    const bookingSelectedDate = document.getElementById('bookingSelectedDate');
+    const bookingSelectedSlot = document.getElementById('bookingSelectedSlot');
+
+    if (tdpDaysScroll) {
+      const uzDays = ['Yak', 'Dush', 'Sesh', 'Chor', 'Pay', 'Juma', 'Shan'];
+      const uzMonths = ['Yan', 'Fev', 'Mart', 'Apr', 'May', 'Iyun', 'Iyul', 'Avg', 'Sen', 'Okt', 'Noy', 'Dek'];
+      const today = new Date();
+
+      for (let i = 0; i < 6; i++) {
+        const d = new Date(today);
+        d.setDate(today.getDate() + i);
+
+        const dayName = i === 0 ? 'Bugun' : (i === 1 ? 'Ertaga' : uzDays[d.getDay()]);
+        const dayNum = d.getDate();
+        const monthName = uzMonths[d.getMonth()];
+        const fullDateStr = `${dayNum}-${monthName} (${dayName})`;
+
+        const card = document.createElement('div');
+        card.className = 'tdp-day-card' + (i === 0 ? ' active' : '');
+        card.setAttribute('data-date', fullDateStr);
+        card.innerHTML = `
+          <span class="tdp-day-name">${dayName}</span>
+          <span class="tdp-day-num">${dayNum}</span>
+          <span class="tdp-day-month">${monthName}</span>
+        `;
+
+        if (i === 0 && bookingSelectedDate) {
+          bookingSelectedDate.value = fullDateStr;
+        }
+
+        card.addEventListener('click', function() {
+          document.querySelectorAll('.tdp-day-card').forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          const chosenDate = this.getAttribute('data-date');
+          if (bookingSelectedDate) bookingSelectedDate.value = chosenDate;
+          updateTestDriveSummary();
+        });
+
+        tdpDaysScroll.appendChild(card);
+      }
+    }
+
+    document.querySelectorAll('#tdpSlotsGrid .slot-pill').forEach(pill => {
+      pill.addEventListener('click', function() {
+        document.querySelectorAll('#tdpSlotsGrid .slot-pill').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        const chosenSlot = this.getAttribute('data-slot');
+        if (bookingSelectedSlot) bookingSelectedSlot.value = chosenSlot;
+        updateTestDriveSummary();
+      });
+    });
+
+    function updateTestDriveSummary() {
+      const d = bookingSelectedDate?.value || 'Bugun';
+      const s = bookingSelectedSlot?.value || '10:00 - 11:00';
+      if (tdpSelectedTag) tdpSelectedTag.innerText = `${d}, ${s}`;
+    }
+
+    // ==========================================================
+    // 4. YOQILG'I VA ELEKTR TEJAMKORLIK KALKULYATORI
+    // ==========================================================
+    const fcRange = document.getElementById('fcRange');
+    const fcDistanceVal = document.getElementById('fcDistanceVal');
+    const fcMonthlyKm = document.getElementById('fcMonthlyKm');
+    const fcYearlyKm = document.getElementById('fcYearlyKm');
+    const petrolMonthlyCost = document.getElementById('petrolMonthlyCost');
+    const petrolYearlyCost = document.getElementById('petrolYearlyCost');
+    const evMonthlyCost = document.getElementById('evMonthlyCost');
+    const evYearlyCost = document.getElementById('evYearlyCost');
+    const savingsYearlyText = document.getElementById('savingsYearlyText');
+    const savingsYearlyUsd = document.getElementById('savingsYearlyUsd');
+    const savings5yrText = document.getElementById('savings5yrText');
+    const btnExploreEvs = document.getElementById('btnExploreEvs');
+
+    function updateFuelCalculator() {
+      if (!fcRange) return;
+      const kmPerDay = parseInt(fcRange.value) || 50;
+      const monthlyKm = kmPerDay * 30;
+      const yearlyKm = kmPerDay * 365;
+
+      if (fcDistanceVal) fcDistanceVal.innerText = kmPerDay + ' km / kun';
+      if (fcMonthlyKm) fcMonthlyKm.innerText = monthlyKm.toLocaleString('ru-RU') + ' km';
+      if (fcYearlyKm) fcYearlyKm.innerText = yearlyKm.toLocaleString('ru-RU') + ' km';
+
+      // Benzin sarfi (Cobalt/Malibu o'rtacha 8.5L / 100km, 1L = 12,000 so'm)
+      const petrolCostPerKm = (8.5 / 100) * 12000; // ~1,020 UZS/km
+      const petrolMonthUZS = Math.round(monthlyKm * petrolCostPerKm);
+      const petrolYearUZS = Math.round(yearlyKm * petrolCostPerKm);
+
+      // Gibrid / EV sarfi (BYD DM-i 4.0L ekvivalent @ 4,800 UZS)
+      const evCostPerKm = (4.0 / 100) * 4800; // ~192 UZS/km
+      const evMonthUZS = Math.round(monthlyKm * evCostPerKm);
+      const evYearUZS = Math.round(yearlyKm * evCostPerKm);
+
+      const yearlySavingsUZS = petrolYearUZS - evYearUZS;
+      const fiveYearSavingsUZS = yearlySavingsUZS * 5;
+      const yearlySavingsUSD = Math.round(yearlySavingsUZS / USD_TO_UZS);
+      const fiveYearSavingsUSD = Math.round(fiveYearSavingsUZS / USD_TO_UZS);
+
+      if (petrolMonthlyCost) petrolMonthlyCost.innerText = formatCurrency(Math.round(petrolMonthUZS / USD_TO_UZS));
+      if (petrolYearlyCost) petrolYearlyCost.innerText = formatCurrency(Math.round(petrolYearUZS / USD_TO_UZS));
+      if (evMonthlyCost) evMonthlyCost.innerText = formatCurrency(Math.round(evMonthUZS / USD_TO_UZS));
+      if (evYearlyCost) evYearlyCost.innerText = formatCurrency(Math.round(evYearUZS / USD_TO_UZS));
+
+      if (savingsYearlyText) savingsYearlyText.innerText = formatCurrency(yearlySavingsUSD);
+      if (savingsYearlyUsd) savingsYearlyUsd.innerText = `(Taxminan ${formatCurrency(yearlySavingsUSD)})`;
+      if (savings5yrText) savings5yrText.innerText = `${formatCurrency(fiveYearSavingsUSD)} tejov`;
+    }
+
+    if (fcRange) {
+      fcRange.addEventListener('input', updateFuelCalculator);
+      updateFuelCalculator();
+    }
+
+    if (btnExploreEvs) {
+      btnExploreEvs.addEventListener('click', () => {
+        const evPill = document.querySelector('#filterPillsGroup .filter-pill[data-filter="ev"]');
+        if (evPill) evPill.click();
+        const catalogSec = document.getElementById('catalog-filter');
+        if (catalogSec) catalogSec.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // ==========================================================
+    // 5. SUG'URTA (KASKO VA MAJBURIY) KALKULYATORI
+    // ==========================================================
+    const insCarSelect = document.getElementById('insCarSelect');
+    const insYearlyTotal = document.getElementById('insYearlyTotal');
+    const insMonthlyTotal = document.getElementById('insMonthlyTotal');
+    const insCarName = document.getElementById('insCarName');
+    const insCarPriceVal = document.getElementById('insCarPriceVal');
+    const insCoverageVal = document.getElementById('insCoverageVal');
+    const insDiscountVal = document.getElementById('insDiscountVal');
+    const insOrderBtn = document.getElementById('insOrderBtn');
+
+    let selectedInsExp = 3;
+
+    if (insCarSelect) {
+      allCarsData.forEach((car, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.text = `${car.name} ($${car.price.toLocaleString('en-US')})`;
+        insCarSelect.appendChild(opt);
+      });
+      insCarSelect.addEventListener('change', updateInsuranceCalculator);
+    }
+
+    document.querySelectorAll('input[name="ins_package"]').forEach(radio => {
+      radio.addEventListener('change', updateInsuranceCalculator);
+    });
+
+    document.querySelectorAll('#insExpPills .ins-exp-pill').forEach(pill => {
+      pill.addEventListener('click', function() {
+        document.querySelectorAll('#insExpPills .ins-exp-pill').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        selectedInsExp = parseInt(this.getAttribute('data-exp')) || 3;
+        updateInsuranceCalculator();
+      });
+    });
+
+    function updateInsuranceCalculator() {
+      if (!insCarSelect) return;
+      const idx = parseInt(insCarSelect.value) || 0;
+      const car = allCarsData[idx] || allCarsData[0];
+      const pkg = document.querySelector('input[name="ins_package"]:checked')?.value || 'kasko_std';
+
+      let discountPercent = selectedInsExp >= 5 ? 10 : (selectedInsExp >= 3 ? 5 : 0);
+      let yearlyUSD = 0;
+      let coverageText = '100% Bozor narxi miqdorida';
+
+      if (pkg === 'compulsory') {
+        // 56 000 UZS Davlat majburiy sug'urtasi
+        yearlyUSD = Math.round(56000 / USD_TO_UZS);
+        coverageText = "40 mln so'mgacha uchinchi shaxslarga";
+        discountPercent = 0;
+      } else if (pkg === 'kasko_std') {
+        const raw = car.price * 0.018; // 1.8%
+        yearlyUSD = Math.round(raw * (1 - discountPercent / 100));
+        coverageText = '100% Avtomobil bozor qiymati miqdorida';
+      } else if (pkg === 'kasko_vip') {
+        const raw = car.price * 0.028; // 2.8%
+        yearlyUSD = Math.round(raw * (1 - discountPercent / 100));
+        coverageText = "100% VIP To'liq himoya + Bepul yangi mashina";
+      }
+
+      const monthlyUSD = Math.round(yearlyUSD / 12);
+
+      if (insYearlyTotal) insYearlyTotal.innerText = formatCurrency(yearlyUSD) + ' / yil';
+      if (insMonthlyTotal) insMonthlyTotal.innerText = 'yoki oyiga ' + formatCurrency(monthlyUSD) + ' dan';
+      if (insCarName) insCarName.innerText = car.name;
+      if (insCarPriceVal) insCarPriceVal.innerText = formatCurrency(car.price);
+      if (insCoverageVal) insCoverageVal.innerText = coverageText;
+      if (insDiscountVal) insDiscountVal.innerText = discountPercent > 0 ? `${discountPercent}% Haydovchilik tajribasi uchun chegirma` : 'Standart tarif (chegirmasiz)';
+
+      if (insOrderBtn) {
+        const pkgNames = { compulsory: "Majburiy Davlat", kasko_std: "KASKO Standart (1.8%)", kasko_vip: "KASKO VIP To'liq (2.8%)" };
+        const tgMsg = `🛡️ AUTO MOTORS - Sug'urta buyurtmasi!\n\n🚘 Avtomobil: ${car.name}\n💰 Narxi: $${car.price.toLocaleString('en-US')}\n📋 Paket: ${pkgNames[pkg]}\n💵 Yillik to'lov: $${yearlyUSD} (${formatCurrency(yearlyUSD)})\n⭐ Chegirma: ${discountPercent}%`;
+        insOrderBtn.href = `https://t.me/share/url?url=${encodeURIComponent('https://t.me/+998973419500')}&text=${encodeURIComponent(tgMsg)}`;
+      }
+    }
+    updateInsuranceCalculator();
+
+    // ==========================================================
+    // 6. SHARH QOLDIRISH MODALI VA JONLI SHARHLAR
+    // ==========================================================
+    const openReviewModalBtn = document.getElementById('openReviewModalBtn');
+    const reviewModal = document.getElementById('reviewModal');
+    const reviewModalClose = document.getElementById('reviewModalClose');
+    const reviewModalBackdrop = document.getElementById('reviewModalBackdrop');
+    const reviewSubmitForm = document.getElementById('reviewSubmitForm');
+    const rmCarSelect = document.getElementById('rmCarSelect');
+    const starRatingPicker = document.getElementById('starRatingPicker');
+    const rmRatingValue = document.getElementById('rmRatingValue');
+    const rmRatingDisplay = document.getElementById('rmRatingDisplay');
+
+    if (rmCarSelect) {
+      allCarsData.forEach(car => {
+        const opt = document.createElement('option');
+        opt.value = car.name;
+        opt.text = car.name;
+        rmCarSelect.appendChild(opt);
+      });
+    }
+
+    function openReviewModal() {
+      if (reviewModal) {
+        reviewModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeReviewModal() {
+      if (reviewModal) {
+        reviewModal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (openReviewModalBtn) openReviewModalBtn.addEventListener('click', openReviewModal);
+    if (reviewModalClose) reviewModalClose.addEventListener('click', closeReviewModal);
+    if (reviewModalBackdrop) reviewModalBackdrop.addEventListener('click', closeReviewModal);
+
+    // Yulduzchalar tanlagichi
+    if (starRatingPicker) {
+      const stars = starRatingPicker.querySelectorAll('.star-pick');
+      const ratingLabels = {
+        '1': "1.0 (Qoniqarsiz)",
+        '2': "2.0 (O'rtacha)",
+        '3': "3.0 (Yaxshi)",
+        '4': "4.0 (Juda yaxshi)",
+        '5': "5.0 (A'lo)"
+      };
+
+      stars.forEach(star => {
+        star.addEventListener('click', function() {
+          const val = parseInt(this.getAttribute('data-rating')) || 5;
+          if (rmRatingValue) rmRatingValue.value = val;
+          if (rmRatingDisplay) rmRatingDisplay.innerText = ratingLabels[val];
+          stars.forEach(s => {
+            const r = parseInt(s.getAttribute('data-rating'));
+            s.classList.toggle('active', r <= val);
+          });
+        });
+      });
+    }
+
+    // Saqlangan sharhlarni yuklash
+    function loadSavedReviews() {
+      try {
+        const saved = JSON.parse(localStorage.getItem('automotors_custom_reviews')) || [];
+        const reviewsGrid = document.querySelector('.reviews-grid');
+        if (reviewsGrid && saved.length > 0) {
+          saved.forEach(r => {
+            const card = createReviewCardElement(r);
+            reviewsGrid.prepend(card);
+          });
+        }
+      } catch (e) {}
+    }
+
+    function createReviewCardElement(data) {
+      const card = document.createElement('div');
+      card.className = 'review-card' + (data.isNew ? ' review-just-added' : '');
+
+      let starsHtml = '';
+      for (let i = 1; i <= 5; i++) {
+        starsHtml += `<i class="fa-${i <= data.rating ? 'solid' : 'regular'} fa-star"></i>`;
+      }
+
+      card.innerHTML = `
+        <div class="review-stars">${starsHtml}</div>
+        <p class="review-text">"${escapeHtml(data.text)}"</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar" style="display:flex; align-items:center; justify-content:center; background: var(--accent); color: #fff; font-weight:800; font-size:1.1rem; border-radius:50%; width:44px; height:44px;">
+            ${data.author.charAt(0).toUpperCase()}
+          </div>
+          <div>
+            <strong>${escapeHtml(data.author)}</strong>
+            <span>${escapeHtml(data.city)} &bull; <em class="review-car-tag">${escapeHtml(data.car)}</em></span>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    function escapeHtml(str) {
+      return (str || '').replace(/[&<>"']/g, function(m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+      });
+    }
+
+    loadSavedReviews();
+
+    if (reviewSubmitForm) {
+      reviewSubmitForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const author = document.getElementById('rmName').value.trim();
+        const city = document.getElementById('rmCity').value.trim();
+        const car = document.getElementById('rmCarSelect').value;
+        const rating = parseInt(document.getElementById('rmRatingValue')?.value) || 5;
+        const text = document.getElementById('rmText').value.trim();
+
+        if (!author || !text) return;
+
+        const newReview = { author, city, car, rating, text, date: new Date().toLocaleDateString('uz-UZ'), isNew: true };
+
+        const reviewsGrid = document.querySelector('.reviews-grid');
+        if (reviewsGrid) {
+          const cardEl = createReviewCardElement(newReview);
+          reviewsGrid.prepend(cardEl);
+          cardEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // LocalStorage'ga yozish
+        try {
+          const list = JSON.parse(localStorage.getItem('automotors_custom_reviews')) || [];
+          list.unshift(newReview);
+          localStorage.setItem('automotors_custom_reviews', JSON.stringify(list));
+        } catch (e) {}
+
+        reviewSubmitForm.reset();
+        closeReviewModal();
+        showToast('⭐ Rahmat! Fikringiz saytga muvaffaqiyatli joylandi.');
+      });
+    }
+
+    // ==========================================================
+    // 7. DVIGATEL TOVUSHI SIMULYATORI (WEB AUDIO API SYNTHESIS)
+    // ==========================================================
+    let audioCtx = null;
+
+    function playEngineSound(carName, btn) {
+      if (!window.AudioContext && !window.webkitAudioContext) {
+        showToast("Brauzeringiz audio tizimini qo'llab-quvvatlamaydi");
+        return;
+      }
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        if (btn) btn.classList.add('playing');
+        showToast('🔊 ' + carName + ' dvigateli tovushi yangramoqda...');
+
+        const nameLower = (carName || '').toLowerCase();
+        const isV8 = nameLower.includes('m5') || nameLower.includes('g63') || nameLower.includes('escalade') || 
+                     nameLower.includes('tahoe') || nameLower.includes('urus') || nameLower.includes('ferrari') || 
+                     nameLower.includes('bentley') || nameLower.includes('cullinan') || nameLower.includes('maybach') ||
+                     nameLower.includes('range rover') || nameLower.includes('traverse') || nameLower.includes('xm');
+        const isEv = nameLower.includes('byd') || nameLower.includes('tesla') || nameLower.includes('yangwang');
+
+        const now = audioCtx.currentTime;
+        const masterGain = audioCtx.createGain();
+        masterGain.connect(audioCtx.destination);
+        masterGain.gain.setValueAtTime(0.001, now);
+
+        if (isEv) {
+          // Elektromobil giper-tezlashuv ovozi
+          const osc1 = audioCtx.createOscillator();
+          const osc2 = audioCtx.createOscillator();
+          osc1.type = 'sine';
+          osc2.type = 'triangle';
+
+          osc1.frequency.setValueAtTime(160, now);
+          osc1.frequency.exponentialRampToValueAtTime(540, now + 1.2);
+          osc1.frequency.exponentialRampToValueAtTime(320, now + 2.0);
+          osc1.frequency.exponentialRampToValueAtTime(740, now + 3.2);
+
+          osc2.frequency.setValueAtTime(320, now);
+          osc2.frequency.exponentialRampToValueAtTime(1080, now + 1.2);
+          osc2.frequency.exponentialRampToValueAtTime(640, now + 2.0);
+          osc2.frequency.exponentialRampToValueAtTime(1480, now + 3.2);
+
+          masterGain.gain.linearRampToValueAtTime(0.18, now + 0.2);
+          masterGain.gain.linearRampToValueAtTime(0.16, now + 2.8);
+          masterGain.gain.linearRampToValueAtTime(0.001, now + 3.5);
+
+          osc1.connect(masterGain);
+          osc2.connect(masterGain);
+          osc1.start(now);
+          osc2.start(now);
+          osc1.stop(now + 3.5);
+          osc2.stop(now + 3.5);
+        } else {
+          // V8 yoki Inline-4 Turbo benzin dvigateli
+          const baseFreq = isV8 ? 48 : 66;
+          const osc1 = audioCtx.createOscillator();
+          const osc2 = audioCtx.createOscillator();
+          const subOsc = audioCtx.createOscillator();
+
+          osc1.type = 'sawtooth';
+          osc2.type = 'sawtooth';
+          subOsc.type = 'triangle';
+
+          osc1.frequency.setValueAtTime(baseFreq, now);
+          osc1.frequency.exponentialRampToValueAtTime(baseFreq * 2.8, now + 1.0);
+          osc1.frequency.exponentialRampToValueAtTime(baseFreq * 1.3, now + 1.8);
+          osc1.frequency.exponentialRampToValueAtTime(baseFreq * 3.6, now + 2.8);
+          osc1.frequency.exponentialRampToValueAtTime(baseFreq, now + 3.4);
+
+          osc2.frequency.setValueAtTime(baseFreq * 1.5, now);
+          osc2.frequency.exponentialRampToValueAtTime(baseFreq * 4.2, now + 1.0);
+          osc2.frequency.exponentialRampToValueAtTime(baseFreq * 1.9, now + 1.8);
+          osc2.frequency.exponentialRampToValueAtTime(baseFreq * 5.4, now + 2.8);
+
+          subOsc.frequency.setValueAtTime(baseFreq * 0.5, now);
+          subOsc.frequency.exponentialRampToValueAtTime(baseFreq * 1.4, now + 1.0);
+
+          const filter = audioCtx.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(isV8 ? 500 : 700, now);
+          filter.frequency.exponentialRampToValueAtTime(isV8 ? 1600 : 2200, now + 1.0);
+          filter.frequency.exponentialRampToValueAtTime(isV8 ? 600 : 900, now + 1.8);
+          filter.frequency.exponentialRampToValueAtTime(isV8 ? 2200 : 3000, now + 2.8);
+          filter.frequency.exponentialRampToValueAtTime(isV8 ? 500 : 700, now + 3.4);
+
+          osc1.connect(filter);
+          osc2.connect(filter);
+          subOsc.connect(filter);
+          filter.connect(masterGain);
+
+          masterGain.gain.linearRampToValueAtTime(0.22, now + 0.1);
+          masterGain.gain.linearRampToValueAtTime(0.25, now + 1.0);
+          masterGain.gain.linearRampToValueAtTime(0.18, now + 1.8);
+          masterGain.gain.linearRampToValueAtTime(0.26, now + 2.8);
+          masterGain.gain.linearRampToValueAtTime(0.001, now + 3.5);
+
+          osc1.start(now);
+          osc2.start(now);
+          subOsc.start(now);
+          osc1.stop(now + 3.5);
+          osc2.stop(now + 3.5);
+          subOsc.stop(now + 3.5);
+        }
+
+        setTimeout(() => {
+          if (btn) btn.classList.remove('playing');
+        }, 3500);
+      } catch (err) {
+        console.error('Audio play error:', err);
+        if (btn) btn.classList.remove('playing');
+      }
+    }
+
+    // Kartochkalardagi audio tugmalarga ulash
+    document.querySelectorAll('.btn-card-sound').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const card = this.closest('.car-card');
+        const carName = card?.getAttribute('data-name') || card?.querySelector('.car-name')?.innerText || 'Avtomobil';
+        playEngineSound(carName, this);
+      });
+    });
+
+    // Quick View modalidagi dvigatel tugmasi
+    const cmSoundBtn = document.getElementById('cmSoundBtn');
+    if (cmSoundBtn) {
+      cmSoundBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const carName = document.getElementById('cmTitle')?.innerText || 'Avtomobil';
+        playEngineSound(carName, this);
+      });
+    }
+
   </script>
+
+
+  <!-- ==========================================================
+       FLOATING ACTIONS (Tezkor aloqa va yuqoriga tugmalari)
+       ========================================================== -->
+  <div class="floating-actions">
+    <!-- Yuqoriga qaytish -->
+    <a href="#home" class="float-btn float-top" title="Yuqoriga chiqish" aria-label="Yuqoriga">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+    <!-- Telegram -->
+    <a href="https://t.me/+998973419500" target="_blank" class="float-btn float-tg" title="Telegramda yozish" aria-label="Telegram">
+      <i class="fa-brands fa-telegram"></i>
+    </a>
+    <!-- Telefon qo'ng'irog'i -->
+    <a href="tel:+998973419500" class="float-btn float-phone" title="Qo'ng'iroq qilish" aria-label="Qo'ng'iroq">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
 
 </body>
 
